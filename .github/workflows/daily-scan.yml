@@ -1,0 +1,54 @@
+name: Daily AI Infra Radar
+
+on:
+  schedule:
+    # UTC 01:17，北京时间 09:17；GitHub 调度可能延迟。
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-infra-radar-main
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Check scanner and decision notes
+        run: |
+          npm ci
+          npm test
+          npm run verify-notes
+      - name: Scan public upstream repositories
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/scan.py
+      - name: Publish run summary
+        run: cat reports/latest.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit generated reports to this private repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data reports
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'chore(radar): refresh contribution opportunities'
+          git push origin HEAD:main

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "repo": "LMCache/LMCache", "kind": "issue", "number": 5454,
+      "reviewed_at": "2026-10-04", "mode": "investigate",
+      "reason": "与 KV buffer 生命周期研究匹配；报告含 CPU mock 测试，需先确认 terminal result 是否保证传输停止，不能直接把观察到的行为断言为数据损坏。",
+      "next_step": "固定当前 dev，重跑 CPU 模拟测试，画出 timeout → result → unlock → reclaim 顺序；向维护者确认契约后再考虑修复。",
+      "evidence": ["https://github.com/LMCache/LMCache/issues/5454", "https://github.com/LMCache/LMCache/issues/5263"]
+    },
+    {
+      "repo": "ggml-org/llama.cpp", "kind": "discussion", "number": 29885,
+      "reviewed_at": "2026-10-04", "mode": "discuss",
+      "reason": "跨重启 KV 恢复适合缓存身份、布局、持久化与正确性分析；帖子中的性能数是作者数据，未在本机验证。",
+      "next_step": "阅读作者补丁，设计同前缀/变前缀、模型或 KV dtype 变化、重启与损坏快照的测试矩阵；补充真实测量后再反馈。",
+      "evidence": ["https://github.com/ggml-org/llama.cpp/discussions/29885"]
+    },
+    {
+      "repo": "LMCache/LMCache", "kind": "discussion", "number": 5146,
+      "reviewed_at": "2026-10-04", "mode": "discuss",
+      "reason": "MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码与单元测试参与，不要求先拥有原报告的多卡硬件。",
+      "next_step": "对照当前 vLLM 的 kv_role 和 LMCache 单进程/MP connector，列出读写行为差异及 CPU 测试；先确认维护者设计意图。",
+      "evidence": ["https://github.com/LMCache/LMCache/discussions/5146"]
+    },
+    {
+      "repo": "flashinfer-ai/flashinfer", "kind": "discussion", "number": 4402,
+      "reviewed_at": "2026-10-04", "mode": "discuss",
+      "reason": "持久化 KV 的模型、tokenizer、adapter 与布局失效边界契合现有经历；话题较旧，评论前重读全线程。",
+      "next_step": "提供一个可运行的最小失效案例或测试规范，区分 cache identity、数值兼容和调度影响。",
+      "evidence": ["https://github.com/orgs/flashinfer-ai/discussions/4402"]
+    },
+    {
+      "repo": "sgl-project/sglang", "kind": "issue", "number": 42070,
+      "reviewed_at": "2026-10-04", "mode": "collaborate",
+      "reason": "HiCache file lookup 与主线匹配，但已有修复 PR #42077；适合补充复杂度、文件增长与并发修改的验证。",
+      "next_step": "先读 #42077 当前补丁和评审，寻找尚未覆盖的回归用例；不重复认领同一修复。",
+      "evidence": ["https://github.com/sgl-project/sglang/pull/42077"]
+    },
+    {
+      "repo": "flashinfer-ai/flashinfer", "kind": "issue", "number": 5878,
+      "reviewed_at": "2026-10-04", "mode": "collaborate",
+      "reason": "采样参数的输入/输出行语义适合正确性测试，但已有修复 PR #5921，零评论不代表无人负责。",
+      "next_step": "核对 #5921 及 per-row seed/offset 语义，补充 indices 乱序、重复、长度变化的边界测试。",
+      "evidence": ["https://github.com/flashinfer-ai/flashinfer/pull/5921"]
+    }
+  ]
+}

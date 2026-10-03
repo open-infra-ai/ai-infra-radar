@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "sglang-36116", "repo": "sgl-project/sglang", "kind": "pull_request", "number": 36116,
+      "status": "submitted", "last_action_at": "2026-08-24", "follow_up_on": "2026-10-05",
+      "summary": "已有 Slurm 文档 PR；本轮只读取上游状态，不自动催促维护者。",
+      "next_step": "阅读当前评审和 CI，确认示例仍与 main 一致，处理具体反馈；有实质更新时再跟进。",
+      "evidence": ["https://github.com/sgl-project/sglang/pull/36116"]
+    },
+    {
+      "id": "sglang-36115", "repo": "sgl-project/sglang", "kind": "pull_request", "number": 36115,
+      "status": "closed", "last_action_at": "2026-09-18", "follow_up_on": null,
+      "summary": "已有 page-aligned decode allocation 测试 PR，目前关闭且未合入。",
+      "next_step": "复盘关闭原因和可迁移测试经验；不把关闭表述为合入。",
+      "evidence": ["https://github.com/sgl-project/sglang/pull/36115"]
+    }
+  ]
+}

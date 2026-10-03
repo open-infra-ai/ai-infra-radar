@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "scan": {
+    "recent_issues": 25,
+    "labelled_issues": 10,
+    "topic_issues": 15,
+    "discussions": 6,
+    "detail_candidates_per_repo": 6,
+    "max_detail_pages": 10,
+    "report_limit": 25
+  },
+  "profile": {
+    "username": "holtwood",
+    "hardware": "本机核查为 RTX 3060 Laptop 6 GiB；CPU 和单卡可用，其他硬件需单独确认",
+    "topics": {
+      "KV 与存储": ["kv cache", "kv-cache", "kvcache", "hicache", "radix", "prefetch", "offload", "l2 adapter", "buffer", "memoryobj"],
+      "Serving 与评测": ["scheduler", "scheduling", "batching", "streaming", "sse", "ttft", "tpot", "throughput", "benchmark", "cancellation", "timeout"],
+      "Kernel 与正确性": ["attention", "sampling", "softmax", "bf16", "bfloat16", "fp16", "triton", "cuda graph", "rope", "quantiz", "gguf", "tokenizer"],
+      "工程与测试": ["cli", "cmake", "regression", "unit test", "cpu-only", "cpu only", "packaging", "flaky"]
+    }
+  },
+  "projects": [
+    {"repo": "sgl-project/sglang", "priority": 3, "focus": "HiCache、KV offloading、调度、单卡复现与测试", "search_terms": ["hicache", "cache"]},
+    {"repo": "vllm-project/vllm", "priority": 3, "focus": "KV 管理、Serving API、评测与调度", "search_terms": ["cache", "streaming"]},
+    {"repo": "LMCache/LMCache", "priority": 3, "focus": "缓存生命周期、L1/L2 传输、可观测性与 CPU 测试", "search_terms": ["L2", "prefetch"]},
+    {"repo": "flashinfer-ai/flashinfer", "priority": 2, "focus": "采样、attention、数值正确性与回归测试"},
+    {"repo": "ggml-org/llama.cpp", "priority": 2, "focus": "GGUF、量化、KV 持久化、CUDA 与服务器行为"},
+    {"repo": "triton-lang/triton", "priority": 2, "focus": "解释器、算子正确性、最小复现与文档"},
+    {"repo": "kvcache-ai/Mooncake", "priority": 2, "focus": "KV 存储、传输与内存生命周期"},
+    {"repo": "NVIDIA/TensorRT-LLM", "priority": 1, "focus": "推理、Serving 与接口测试"},
+    {"repo": "NVIDIA/cutlass", "priority": 1, "focus": "CUDA 数值与布局、CPU 可验证问题"},
+    {"repo": "pytorch/pytorch", "priority": 1, "focus": "torch.library、Inductor、数值正确性与集成"},
+    {"repo": "ray-project/ray", "priority": 1, "focus": "Ray Serve、LLM 服务与可复现工程问题"},
+    {"repo": "vllm-project/aibrix", "priority": 1, "focus": "Serving 控制面、指标与测试"}
+  ]
+}

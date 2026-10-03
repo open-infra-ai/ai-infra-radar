@@ -1,0 +1,15 @@
+{
+  "name": "ai-infra-radar",
+  "private": true,
+  "scripts": {
+    "test": "python3 -m unittest discover -s tests -v",
+    "scan": "python3 scripts/scan.py",
+    "verify-agent-note-tree": "tsx scripts/verify-agent-note-tree.ts",
+    "verify-agent-note-format": "tsx scripts/verify-agent-note-format.ts",
+    "verify-archived": "tsx scripts/verify-archived-agent-notes.ts",
+    "verify-notes": "npm run verify-agent-note-tree && npm run verify-agent-note-format && npm run verify-archived"
+  },
+  "devDependencies": {
+    "tsx": "4.23.15"
+  }
+}
