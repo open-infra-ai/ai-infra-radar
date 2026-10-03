@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scanned_at": "2026-10-03T17:57:50+00:00",
+  "scanned_at": "2026-10-03T18:07:03+00:00",
   "sample_count": 518,
   "coverage": [
     {
@@ -381,272 +381,16 @@
   ],
   "changes": [
     {
-      "url": "https://github.com/LMCache/LMCache/issues/5339",
+      "url": "https://github.com/vllm-project/vllm/issues/37035",
       "change": "首次采集"
     },
     {
-      "url": "https://github.com/sgl-project/sglang/issues/38846",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/41576",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/47161",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/48020",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/51771",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/55195",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/55313",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/56263",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/58824",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/59738",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/39991",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/40926",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/41514",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/42068",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/43090",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/51948",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/54359",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/55132",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/59773",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/37834",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/47349",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/59534",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/4299",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/4342",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/4945",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/5326",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/5350",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/41617",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/41866",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/53393",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/58315",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/59218",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/59590",
-      "change": "首次采集"
+      "url": "https://github.com/pytorch/pytorch/issues/187455",
+      "change": "上游更新"
     },
     {
-      "url": "https://github.com/LMCache/LMCache/issues/5032",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/5135",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/36797",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/38428",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/39444",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/40973",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/4266",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/38300",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/57032",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/40232",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/5371",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/41244",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/59803",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/38889",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/4127",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/41351",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/57479",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/3752",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/59498",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/37372",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/38448",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/38470",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/5073",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/36889",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/57572",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/LMCache/LMCache/issues/5230",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/53912",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/57423",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm/issues/57593",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/38866",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/38031",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/33522",
-      "change": "首次采集"
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang/issues/38156",
-      "change": "首次采集"
+      "url": "https://github.com/sgl-project/sglang/issues/17050",
+      "change": "上游更新"
     }
   ],
   "shortlist": [
@@ -700,11 +444,11 @@
     {
       "repo": "LMCache/LMCache",
       "kind": "issue",
-      "number": 5203,
-      "title": "[good-first-issue] tests: convert disagg channel logging to %-format",
-      "url": "https://github.com/LMCache/LMCache/issues/5203",
+      "number": 5185,
+      "title": "[good-first-issue] examples: convert token_dropping experiment logging to %-format",
+      "url": "https://github.com/LMCache/LMCache/issues/5185",
       "state": "OPEN",
-      "updated_at": "2026-09-19T18:02:37Z",
+      "updated_at": "2026-09-19T08:51:26Z",
       "score": 66,
       "mode": "verify",
       "topics": [
@@ -760,14 +504,14 @@
       ]
     },
     {
-      "repo": "sgl-project/sglang",
+      "repo": "LMCache/LMCache",
       "kind": "issue",
-      "number": 8072,
-      "title": "[Feature] Benchmark with audio input",
-      "url": "https://github.com/sgl-project/sglang/issues/8072",
+      "number": 5187,
+      "title": "[good-first-issue] logging: convert top-level LMCache utility logging to %-format",
+      "url": "https://github.com/LMCache/LMCache/issues/5187",
       "state": "OPEN",
-      "updated_at": "2026-09-26T06:50:55Z",
-      "score": 65,
+      "updated_at": "2026-09-22T14:41:15Z",
+      "score": 66,
       "mode": "verify",
       "topics": [
         "Serving 与评测"
@@ -806,34 +550,31 @@
       ]
     },
     {
-      "repo": "LMCache/LMCache",
+      "repo": "sgl-project/sglang",
       "kind": "issue",
-      "number": 5404,
-      "title": "[good-first-issue] tests: retain L2 diagnostics when flaky TTFT checks fail",
-      "url": "https://github.com/LMCache/LMCache/issues/5404",
+      "number": 2272,
+      "title": "[Kernel] cuDNN attention backend",
+      "url": "https://github.com/sgl-project/sglang/issues/2272",
       "state": "OPEN",
-      "updated_at": "2026-09-29T22:17:38Z",
-      "score": 68,
+      "updated_at": "2026-09-21T22:43:28Z",
+      "score": 61,
       "mode": "collaborate",
       "topics": [
-        "KV 与存储",
-        "Serving 与评测",
-        "工程与测试"
+        "Kernel 与正确性"
       ]
     },
     {
       "repo": "sgl-project/sglang",
       "kind": "issue",
-      "number": 2271,
-      "title": "[Kernel] Optimize triton decoding kernels for long context",
-      "url": "https://github.com/sgl-project/sglang/issues/2271",
+      "number": 8072,
+      "title": "[Feature] Benchmark with audio input",
+      "url": "https://github.com/sgl-project/sglang/issues/8072",
       "state": "OPEN",
-      "updated_at": "2026-09-21T22:43:29Z",
-      "score": 64,
+      "updated_at": "2026-09-26T06:50:55Z",
+      "score": 65,
       "mode": "verify",
       "topics": [
-        "Serving 与评测",
-        "Kernel 与正确性"
+        "Serving 与评测"
       ]
     },
     {
@@ -870,30 +611,33 @@
     {
       "repo": "sgl-project/sglang",
       "kind": "issue",
-      "number": 2272,
-      "title": "[Kernel] cuDNN attention backend",
-      "url": "https://github.com/sgl-project/sglang/issues/2272",
-      "state": "OPEN",
-      "updated_at": "2026-09-21T22:43:28Z",
-      "score": 61,
-      "mode": "collaborate",
-      "topics": [
-        "Kernel 与正确性"
-      ]
-    },
-    {
-      "repo": "sgl-project/sglang",
-      "kind": "issue",
       "number": 3050,
       "title": "[Bug] Decode Throughput Inconsistency Between bench_serving and Engine Logs",
       "url": "https://github.com/sgl-project/sglang/issues/3050",
       "state": "OPEN",
       "updated_at": "2026-09-03T11:15:16Z",
       "score": 59,
-      "mode": "verify",
+      "mode": "collaborate",
       "topics": [
         "Serving 与评测",
         "Kernel 与正确性"
+      ]
+    },
+    {
+      "repo": "sgl-project/sglang",
+      "kind": "issue",
+      "number": 38846,
+      "title": "[Feature] Expose the effective `max_running_requests` (after the mamba/linear-attention state-cache cap) in `/get_server_info`",
+      "url": "https://github.com/sgl-project/sglang/issues/38846",
+      "state": "OPEN",
+      "updated_at": "2026-09-29T08:06:46Z",
+      "score": 59,
+      "mode": "verify",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "Kernel 与正确性",
+        "工程与测试"
       ]
     },
     {
@@ -944,11 +688,11 @@
     {
       "repo": "vllm-project/vllm",
       "kind": "issue",
-      "number": 47161,
-      "title": "[RFC]: Streaming Derender for Disaggregated Serving",
-      "url": "https://github.com/vllm-project/vllm/issues/47161",
+      "number": 51771,
+      "title": "EAGLE/MTP block drop + prefix caching is untested for hybrid models with ≥3 attention groups (DeepSeek-V4-Flash + DSpark lands there)",
+      "url": "https://github.com/vllm-project/vllm/issues/51771",
       "state": "OPEN",
-      "updated_at": "2026-10-02T16:24:00Z",
+      "updated_at": "2026-10-02T21:59:11Z",
       "score": 59,
       "mode": "verify",
       "topics": [
@@ -1008,11 +752,11 @@
     {
       "repo": "vllm-project/vllm",
       "kind": "issue",
-      "number": 48020,
-      "title": "[Bug]: DeepSeek-V3/V3.1 tool parser drops the tool call when start+end tokens land in the same streaming delta",
-      "url": "https://github.com/vllm-project/vllm/issues/48020",
+      "number": 55195,
+      "title": "[Bug]: Reasoning parsers mishandle markers in multi-token streaming deltas",
+      "url": "https://github.com/vllm-project/vllm/issues/55195",
       "state": "OPEN",
-      "updated_at": "2026-09-26T07:04:41Z",
+      "updated_at": "2026-09-30T12:47:30Z",
       "score": 59,
       "mode": "verify",
       "topics": [

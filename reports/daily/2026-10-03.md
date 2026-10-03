@@ -1,8 +1,8 @@
 # AI Infra 贡献机会
 
-扫描时间（UTC）：`2026-10-03T17:57:50+00:00`。
+扫描时间（UTC）：`2026-10-03T18:07:03+00:00`。
 
-覆盖 12 个项目；去重采集 518 个条目，深读 81 个线程。
+覆盖 12 个项目；去重采集 518 个条目，深读 83 个线程。
 近期、入门标签、主线主题和固定条目构成抽样窗口，**不是全量扫描**。分数表示阅读优先级，不表示能解决的概率。
 认领是规则识别信号；未检出认领不代表无人工作。API 跨引用只有 `willCloseTarget` 才是关闭关联。
 
@@ -97,8 +97,8 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 |---|---|---|---|---|
 | [LMCache/LMCache #5402](https://github.com/LMCache/LMCache/issues/5402) | \[good-first-issue\] tests: make flaky vllm_bench throughput comparisons reproducible | 68 / KV 与存储、Serving 与评测、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认；评论认领信号: MANVIS10, soyeladice-svg；关闭关联 PR [LMCache/LMCache #5409](https://github.com/LMCache/LMCache/pull/5409)；正文仅保留前 6000 字符，结论需读原帖 | 先读已有 PR / 认领评论，寻找未覆盖测试、复现条件或评审问题。 |
 | [LMCache/LMCache #5403](https://github.com/LMCache/LMCache/issues/5403) | \[good-first-issue\] tests: preserve phase timings for flaky long_doc_qa TTFT checks | 68 / KV 与存储、Serving 与评测、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认；评论认领信号: MANVIS10, biluohq, zoushuhang0；关闭关联 PR [LMCache/LMCache #5438](https://github.com/LMCache/LMCache/pull/5438)；正文仅保留前 6000 字符，结论需读原帖 | 先读已有 PR / 认领评论，寻找未覆盖测试、复现条件或评审问题。 |
-| [LMCache/LMCache #5404](https://github.com/LMCache/LMCache/issues/5404) | \[good-first-issue\] tests: retain L2 diagnostics when flaky TTFT checks fail | 68 / KV 与存储、Serving 与评测、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认；评论认领信号: MANVIS10, Tao20060602, ybai08；关闭关联 PR [LMCache/LMCache #5413](https://github.com/LMCache/LMCache/pull/5413)；正文仅保留前 6000 字符，结论需读原帖 | 先读已有 PR / 认领评论，寻找未覆盖测试、复现条件或评审问题。 |
 | [sgl-project/sglang #2272](https://github.com/sgl-project/sglang/issues/2272) | \[Kernel\] cuDNN attention backend | 61 / Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认；assignee: ispobock, zhyncs | 先读已有 PR / 认领评论，寻找未覆盖测试、复现条件或评审问题。 |
+| [sgl-project/sglang #3050](https://github.com/sgl-project/sglang/issues/3050) | \[Bug\] Decode Throughput Inconsistency Between bench_serving and Engine Logs | 59 / Serving 与评测、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认；assignee: zhaochenyang20；正文仅保留前 6000 字符，结论需读原帖 | 先读已有 PR / 认领评论，寻找未覆盖测试、复现条件或评审问题。 |
 | [vllm-project/vllm #9129](https://github.com/vllm-project/vllm/issues/9129) | \[Misc\]: CMake Clean-up / Refactor Tasks | 55 / 工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认；评论认领信号: akshatgit07, jungledesh；相关 PR，需判断是否修复 [vllm-project/vllm #53050](https://github.com/vllm-project/vllm/pull/53050)；关闭关联 PR [vllm-project/vllm #53757](https://github.com/vllm-project/vllm/pull/53757)；相关 PR，需判断是否修复 [vllm-project/vllm #54532](https://github.com/vllm-project/vllm/pull/54532) | 先读已有 PR / 认领评论，寻找未覆盖测试、复现条件或评审问题。 |
 | [vllm-project/vllm #23957](https://github.com/vllm-project/vllm/issues/23957) | \[Feature\]: Support `Phi4Flash` model in V1 | 48 / Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认；评论认领信号: AmanBhattShorthillsAI, aditchawdhary；关闭关联 PR [vllm-project/vllm #44963](https://github.com/vllm-project/vllm/pull/44963) | 先读已有 PR / 认领评论，寻找未覆盖测试、复现条件或评审问题。 |
 
@@ -106,12 +106,12 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 
 | 条目 | 标题 | 分数 / 主题 | 核查与资源 | 下一步 |
 |---|---|---|---|---|
-| [LMCache/LMCache #5203](https://github.com/LMCache/LMCache/issues/5203) | \[good-first-issue\] tests: convert disagg channel logging to %-format | 66 / Serving 与评测 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [LMCache/LMCache #5185](https://github.com/LMCache/LMCache/issues/5185) | \[good-first-issue\] examples: convert token_dropping experiment logging to %-format | 66 / Serving 与评测 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [LMCache/LMCache #5187](https://github.com/LMCache/LMCache/issues/5187) | \[good-first-issue\] logging: convert top-level LMCache utility logging to %-format | 66 / Serving 与评测 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
 | [sgl-project/sglang #8072](https://github.com/sgl-project/sglang/issues/8072) | \[Feature\] Benchmark with audio input | 65 / Serving 与评测 | 已完成配置范围内线程核查；认领仍需人工确认；相关 PR，需判断是否修复 [sgl-project/sglang #41403](https://github.com/sgl-project/sglang/pull/41403) | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [sgl-project/sglang #2271](https://github.com/sgl-project/sglang/issues/2271) | \[Kernel\] Optimize triton decoding kernels for long context | 64 / Serving 与评测、Kernel 与正确性 | 线程尚未核查；assignee: HaiShaw | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [sgl-project/sglang #3050](https://github.com/sgl-project/sglang/issues/3050) | \[Bug\] Decode Throughput Inconsistency Between bench_serving and Engine Logs | 59 / Serving 与评测、Kernel 与正确性 | 线程尚未核查；assignee: zhaochenyang20；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [vllm-project/vllm #47161](https://github.com/vllm-project/vllm/issues/47161) | \[RFC\]: Streaming Derender for Disaggregated Serving | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [vllm-project/vllm #48020](https://github.com/vllm-project/vllm/issues/48020) | \[Bug\]: DeepSeek-V3/V3.1 tool parser drops the tool call when start+end tokens land in the same streaming delta | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [sgl-project/sglang #38846](https://github.com/sgl-project/sglang/issues/38846) | \[Feature\] Expose the effective `max_running_requests` (after the mamba/linear-attention state-cache cap) in `/get_server_info` | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [vllm-project/vllm #51771](https://github.com/vllm-project/vllm/issues/51771) | EAGLE/MTP block drop + prefix caching is untested for hybrid models with ≥3 attention groups (DeepSeek-V4-Flash + DSpark lands there) | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [vllm-project/vllm #55195](https://github.com/vllm-project/vllm/issues/55195) | \[Bug\]: Reasoning parsers mishandle markers in multi-token streaming deltas | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
 
 ## 已有参与与跟进
 
@@ -143,6 +143,6 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 
 ## 本轮变化
 
-首次采集 67
+上游更新 2、首次采集 1
 
 条目离开抽样窗口不能推导已关闭；固定条目与上一轮机会清单会继续核对状态。
