@@ -10,8 +10,8 @@
 
 ---
 
-I checked the query methods at [`1ca53a8`](https://github.com/LMCache/LMCache/blob/1ca53a8aadca1d054f171fd67350be35797cfddc/lmcache/v1/distributed/l2_adapters/p2p_l2_adapter.py#L326-L347) using the original code with mocked dependencies. I haven't run a real NIXL transfer.
+I checked another timeout case at [`1ca53a8`](https://github.com/LMCache/LMCache/blob/1ca53a8aadca1d054f171fd67350be35797cfddc/lmcache/v1/distributed/l2_adapters/p2p_l2_adapter.py#L326-L347) using the original query methods with mocked dependencies. I haven't run a real NIXL transfer.
 
-If the first poll is past the deadline, the adapter returns an all-zero bitmap even when the mocked transfer is already `DONE`. It skips the status check and drops the task, so later polls never reach the transfer client's handle cleanup.
+Even when the transfer is already marked `DONE`, polling after the deadline returns a zero bitmap without calling `query_read_status`. The adapter removes its task, so later adapter polls return `None`. The client's `close()` still has a separate cleanup path.
 
-Could #5255 handle the caller's timeout while the adapter keeps polling until the transfer finishes? I can help test late completion if that's useful.
+This seems worth covering in the timeout tests, including cleanup of an already-completed transfer. I can help add that case if it's useful.
