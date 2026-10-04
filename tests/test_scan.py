@@ -15,12 +15,12 @@ PROJECT = {"repo": "example/infra", "priority": 3}
 PROFILE = {"username": "holtwood", "topics": {"KV": ["kv cache"]}}
 
 
-def issue(number=1):
+def issue(number=1, body="CPU-only repro", author="reporter"):
     return scan.normalize({
         "id": f"I_{number}", "number": number, "title": "KV cache lifetime",
-        "url": f"https://github.com/example/infra/issues/{number}", "body": "CPU-only repro",
+        "url": f"https://github.com/example/infra/issues/{number}", "body": body,
         "createdAt": "2026-10-01T00:00:00Z", "updatedAt": "2026-10-03T00:00:00Z",
-        "author": {"login": "reporter"}, "state": "OPEN", "labels": {"nodes": []},
+        "author": {"login": author}, "state": "OPEN", "labels": {"nodes": []},
         "assignees": {"nodes": []}, "comments": {"totalCount": 0},
     }, PROJECT["repo"], "issue", "recent")
 
@@ -45,6 +45,56 @@ class FakeAPI:
 
 
 class ScanTests(unittest.TestCase):
+    def test_author_intent_beyond_excerpt_routes_to_collaboration(self):
+        intent = "If maintainers agree, I'm happy to work on the fix."
+        row = issue(body="x" * 6100 + "\n" + intent)
+        row.update(detail_checked=True, detail_complete=True)
+        scan.score_item(row, PROJECT, PROFILE, NOW)
+        self.assertTrue(row["body_truncated"])
+        self.assertNotIn(intent, row["body_excerpt"])
+        self.assertEqual(row["author_work_intent"], intent)
+        self.assertEqual(row["claimants"], [])
+        self.assertEqual(row["mode"], "collaborate")
+        self.assertIn("需确认是否已开工", scan.signals(row))
+
+    def test_author_intent_ignores_code_quotes_and_negation(self):
+        for body in (
+            "```python\nprint(\"I'm happy to work on the fix.\")\n```",
+            "~~~text\nI will fix this.\n~~~",
+            "```text\nI will fix this.\n````",
+            "```text\nI will fix this.",
+            "> I'm happy to work on the fix.",
+            "Example: `I will fix this.`",
+            "    I will fix this.",
+            "I will not work on this; I'm not willing to fix it.",
+            "The author is happy to work on the fix.",
+        ):
+            with self.subTest(body=body):
+                row = issue(body=body)
+                row.update(detail_checked=True, detail_complete=True)
+                scan.score_item(row, PROJECT, PROFILE, NOW)
+                self.assertEqual(row["author_work_intent"], "")
+                self.assertEqual(row["mode"], "investigate")
+
+    def test_prose_intent_after_fenced_example_is_detected(self):
+        body = "```text\nI will fix the example.\n````\nI can work on the actual issue."
+        self.assertEqual(scan.author_work_intent(body), "I can work on the actual issue.")
+
+    def test_own_author_intent_does_not_imply_competing_work(self):
+        row = issue(body="我愿意修复这个问题。", author="holtwood")
+        row.update(detail_checked=True, detail_complete=True)
+        scan.score_item(row, PROJECT, PROFILE, NOW)
+        self.assertEqual(row["mode"], "investigate")
+        self.assertEqual(row["score"], 50)
+
+    def test_author_intent_cannot_hide_incomplete_thread_or_closed_state(self):
+        row = issue(body="I can fix this.")
+        scan.score_item(row, PROJECT, PROFILE, NOW)
+        self.assertEqual(row["mode"], "verify")
+        row.update(state="CLOSED", detail_complete=True)
+        scan.score_item(row, PROJECT, PROFILE, NOW)
+        self.assertEqual(row["mode"], "closed")
+
     def test_topic_search_is_merged_with_recent_window(self):
         original = issue()
         raw = {"id": original["node_id"], "number": 1, "title": original["title"], "url": original["url"],

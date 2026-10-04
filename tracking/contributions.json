@@ -2,6 +2,13 @@
   "schema_version": 1,
   "entries": [
     {
+      "id": "LMCache-LMCache-issue-5454", "repo": "LMCache/LMCache", "kind": "issue", "number": 5454,
+      "status": "drafted", "last_action_at": "2026-10-04", "follow_up_on": "2026-10-06",
+      "summary": "完成固定版本源码链路和七场景方法级 CPU mock，准备协作反馈草稿；尚未公开，未复现真实 KV 损坏。",
+      "next_step": "审阅私人草稿并刷新上游线程；明确授权发布后，确认与作者的分工和 #5255 的资源所有权契约。",
+      "evidence": ["https://github.com/LMCache/LMCache/issues/5454", "docs/investigations/lmcache-5454/README.md", "docs/investigations/lmcache-5454/results.json", "docs/investigations/lmcache-5454/reply-draft.md"]
+    },
+    {
       "id": "sglang-36116", "repo": "sgl-project/sglang", "kind": "pull_request", "number": 36116,
       "status": "submitted", "last_action_at": "2026-08-24", "follow_up_on": "2026-10-05",
       "summary": "已有 Slurm 文档 PR；本轮只读取上游状态，不自动催促维护者。",

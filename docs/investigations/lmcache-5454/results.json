@@ -1,0 +1,225 @@
+{
+  "scope": "CPU method-level control-flow probe; unchanged production method bodies, mocked dependencies",
+  "upstream_commit": "1ca53a8aadca1d054f171fd67350be35797cfddc",
+  "python": "3.12.3",
+  "platform": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "probe_sha256": "e326fbd3c48fa67820fca305a54f2b5fde24d50c54941902c5cf8c634e454257",
+  "sources": [
+    {
+      "path": "lmcache/v1/distributed/transfer_channel/impl/nixl_impl.py",
+      "sha256": "86546bb16c85844d384bc2ac40bfaa730c8641ced026f617f28bc403a99b4ded",
+      "method": "NixlTransferChannelClient.query_read_status",
+      "lines": [
+        158,
+        191
+      ]
+    },
+    {
+      "path": "lmcache/v1/distributed/l2_adapters/p2p_l2_adapter.py",
+      "sha256": "767468fc451ba3b4bab4f30494cc68b37a0d7255dfae82634f740b5afa2fdd73",
+      "method": "P2PL2Adapter.query_load_result",
+      "lines": [
+        326,
+        347
+      ]
+    }
+  ],
+  "transfer_api_sha256": "c24561020d9de7d074285b15bb519b658b6be9d121be29852e1e95717c250c50",
+  "limits": [
+    "No package import or constructor/submit path",
+    "No native Bitmap",
+    "No real NIXL or GPU transfer",
+    "No PrefetchController/L1 manager execution",
+    "Not the upstream pytest suite"
+  ],
+  "cases": [
+    {
+      "name": "pending_before_deadline",
+      "passed": true,
+      "polls": [
+        {
+          "now": 9.0,
+          "mock_transfer_status": "PROC",
+          "result": null,
+          "adapter_task_retained": true,
+          "transfer_task_retained": true,
+          "status_checks": 1,
+          "handle_releases": 0
+        },
+        {
+          "now": 9.0,
+          "mock_transfer_status": "PROC",
+          "result": null,
+          "adapter_task_retained": true,
+          "transfer_task_retained": true,
+          "status_checks": 2,
+          "handle_releases": 0
+        }
+      ]
+    },
+    {
+      "name": "pending_at_deadline",
+      "passed": true,
+      "polls": [
+        {
+          "now": 10.0,
+          "mock_transfer_status": "PROC",
+          "result": null,
+          "adapter_task_retained": true,
+          "transfer_task_retained": true,
+          "status_checks": 1,
+          "handle_releases": 0
+        },
+        {
+          "now": 10.0,
+          "mock_transfer_status": "PROC",
+          "result": null,
+          "adapter_task_retained": true,
+          "transfer_task_retained": true,
+          "status_checks": 2,
+          "handle_releases": 0
+        }
+      ]
+    },
+    {
+      "name": "pending_after_deadline",
+      "passed": true,
+      "polls": [
+        {
+          "now": 10.001,
+          "mock_transfer_status": "PROC",
+          "result": [
+            false
+          ],
+          "adapter_task_retained": false,
+          "transfer_task_retained": true,
+          "status_checks": 0,
+          "handle_releases": 0
+        },
+        {
+          "now": 10.001,
+          "mock_transfer_status": "PROC",
+          "result": null,
+          "adapter_task_retained": false,
+          "transfer_task_retained": true,
+          "status_checks": 0,
+          "handle_releases": 0
+        }
+      ]
+    },
+    {
+      "name": "done_before_deadline",
+      "passed": true,
+      "polls": [
+        {
+          "now": 9.0,
+          "mock_transfer_status": "DONE",
+          "result": [
+            true
+          ],
+          "adapter_task_retained": false,
+          "transfer_task_retained": false,
+          "status_checks": 1,
+          "handle_releases": 1
+        },
+        {
+          "now": 9.0,
+          "mock_transfer_status": "DONE",
+          "result": null,
+          "adapter_task_retained": false,
+          "transfer_task_retained": false,
+          "status_checks": 1,
+          "handle_releases": 1
+        }
+      ]
+    },
+    {
+      "name": "done_after_deadline",
+      "passed": true,
+      "polls": [
+        {
+          "now": 10.001,
+          "mock_transfer_status": "DONE",
+          "result": [
+            false
+          ],
+          "adapter_task_retained": false,
+          "transfer_task_retained": true,
+          "status_checks": 0,
+          "handle_releases": 0
+        },
+        {
+          "now": 10.001,
+          "mock_transfer_status": "DONE",
+          "result": null,
+          "adapter_task_retained": false,
+          "transfer_task_retained": true,
+          "status_checks": 0,
+          "handle_releases": 0
+        }
+      ]
+    },
+    {
+      "name": "error_before_deadline",
+      "passed": true,
+      "polls": [
+        {
+          "now": 9.0,
+          "mock_transfer_status": "ERR",
+          "result": [
+            false
+          ],
+          "adapter_task_retained": false,
+          "transfer_task_retained": false,
+          "status_checks": 1,
+          "handle_releases": 1
+        },
+        {
+          "now": 9.0,
+          "mock_transfer_status": "ERR",
+          "result": null,
+          "adapter_task_retained": false,
+          "transfer_task_retained": false,
+          "status_checks": 1,
+          "handle_releases": 1
+        }
+      ]
+    },
+    {
+      "name": "pending_then_timeout_then_done",
+      "passed": true,
+      "polls": [
+        {
+          "now": 9.0,
+          "mock_transfer_status": "PROC",
+          "result": null,
+          "adapter_task_retained": true,
+          "transfer_task_retained": true,
+          "status_checks": 1,
+          "handle_releases": 0
+        },
+        {
+          "now": 10.001,
+          "mock_transfer_status": "PROC",
+          "result": [
+            false
+          ],
+          "adapter_task_retained": false,
+          "transfer_task_retained": true,
+          "status_checks": 1,
+          "handle_releases": 0
+        },
+        {
+          "now": 11.0,
+          "mock_transfer_status": "DONE",
+          "result": null,
+          "adapter_task_retained": false,
+          "transfer_task_retained": true,
+          "status_checks": 1,
+          "handle_releases": 0
+        }
+      ]
+    }
+  ],
+  "passed": 7
+}

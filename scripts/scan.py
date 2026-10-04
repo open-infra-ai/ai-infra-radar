@@ -34,6 +34,12 @@ RELEASE = re.compile(
     r"/unclaim\b|releas\w*.{0,30}claim|not working on|"
     r"(?:don't|do not) have a pr|撤销认领|放弃认领", re.I
 )
+WORK_INTENT = re.compile(
+    r"\bi(?:['’]m| am| would be|['’]d be)\s+(?:happy|willing|ready)\s+to\s+"
+    r"(?:work on|fix|implement|help)\b|"
+    r"\bi(?: will| can|['’]ll)\s+(?:work on|fix|implement)\b|"
+    r"我(?:愿意|可以|会|来)(?:参与|修复|实现|处理)", re.I
+)
 HARDWARE = re.compile(
     r"\b(?:H100|H200|B200|B300|GH200|GB200|DGX Spark|"
     r"SM[_ ]?(?:90|100|103|120|121)|TP\s*[=:]\s*[2-9])\b|"
@@ -42,7 +48,7 @@ HARDWARE = re.compile(
 MODE_NAMES = {
     "investigate": "可尝试调查 / 复现",
     "discuss": "可参与讨论 / 分析",
-    "collaborate": "已有工作：协作验证 / 补测试",
+    "collaborate": "先确认协作 / 补充验证",
     "verify": "需进一步核查",
     "closed": "已关闭 / 已回答",
 }
@@ -59,6 +65,26 @@ def write_json(path, value):
 
 def key(item):
     return (item["repo"], item["kind"], item["number"])
+
+
+def author_work_intent(body):
+    fence = ""
+    for line in body.splitlines():
+        marker = re.match(r"^ {0,3}(`{3,}|~{3,})", line)
+        if fence:
+            if marker and marker[1][0] == fence[0] and len(marker[1]) >= len(fence) and not line[marker.end():].strip():
+                fence = ""
+            continue
+        if marker:
+            fence = marker[1]
+            continue
+        if line.lstrip().startswith(">") or line.startswith("    "):
+            continue
+        text = re.sub(r"`[^`\n]+`", "", line)
+        match = WORK_INTENT.search(text)
+        if match and not RELEASE.search(text):
+            return text[max(0, match.start() - 80):match.end() + 160].strip()
+    return ""
 
 
 class GitHub:
@@ -85,6 +111,7 @@ def normalize(node, repo, kind, origin):
         "created_at": node["createdAt"], "updated_at": node["updatedAt"],
         "author": node["author"]["login"] if node["author"] else "deleted-user",
         "body_excerpt": body[:6000], "body_truncated": len(body) > 6000,
+        "author_work_intent": author_work_intent(body),
         "labels": [label["name"] for label in node.get("labels", {"nodes": []})["nodes"]],
         "assignees": [user["login"] for user in node.get("assignees", {"nodes": []})["nodes"]],
         "comment_count": node["comments"]["totalCount"],
@@ -298,9 +325,10 @@ def score_item(item, project, profile, now):
     claimants = [author for author in detect_claims(item["comments"]) if author != profile["username"]]
     open_prs = [pr for pr in item["linked_prs"] if pr["state"] == "OPEN"]
     closing_prs = [pr for pr in open_prs if pr["will_close_target"]]
+    other_author_intent = bool(item["author_work_intent"]) and item["author"] != profile["username"]
     if claimants or closing_prs:
         score -= 18
-    elif open_prs:
+    elif open_prs or other_author_intent:
         score -= 8
     item.update(score=score, score_reasons=reasons, topics=topics, age_days=age,
                 hardware_mentions=hardware, claimants=claimants, open_related_prs=open_prs,
@@ -311,7 +339,7 @@ def score_item(item, project, profile, now):
         mode = "verify"
     elif item["kind"] == "discussion":
         mode = "discuss"
-    elif item["assignees"] or claimants or closing_prs:
+    elif item["assignees"] or claimants or closing_prs or other_author_intent:
         mode = "collaborate"
     elif open_prs:
         mode = "verify"
@@ -323,7 +351,7 @@ def score_item(item, project, profile, now):
     item["next_step"] = {
         "investigate": "读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。",
         "discuss": "读完整线程，提出一个有源码依据的解释、反例或最小实验。",
-        "collaborate": "先读已有 PR / 认领评论，寻找未覆盖测试、复现条件或评审问题。",
+        "collaborate": "先读作者意愿、认领评论与相关 PR，确认分工后补充测试、复现或评审证据。",
         "verify": "补齐线程、关联 PR 与当前源码核查，再判断参与方式。",
         "closed": "复盘上游结论，核对是否仍有可补充的证据。",
     }[mode]
@@ -384,6 +412,8 @@ def signals(item):
         parts.append("assignee: " + ", ".join(item["assignees"]))
     if item["claimants"]:
         parts.append("评论认领信号: " + ", ".join(item["claimants"]))
+    if item["author_work_intent"]:
+        parts.append(f"作者 {cell(item['author'])} 表达工作意愿（需确认是否已开工）: {cell(item['author_work_intent'])}")
     for pr in item["open_related_prs"][:3]:
         meaning = "关闭关联 PR" if pr["will_close_target"] else "相关 PR，需判断是否修复"
         parts.append(f"{meaning} [{pr['repo']} #{pr['number']}]({pr['url']})")

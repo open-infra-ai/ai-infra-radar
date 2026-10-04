@@ -3,10 +3,10 @@
   "entries": [
     {
       "repo": "LMCache/LMCache", "kind": "issue", "number": 5454,
-      "reviewed_at": "2026-10-04", "mode": "investigate",
-      "reason": "与 KV buffer 生命周期研究匹配；报告含 CPU mock 测试，需先确认 terminal result 是否保证传输停止，不能直接把观察到的行为断言为数据损坏。",
-      "next_step": "固定当前 dev，重跑 CPU 模拟测试，画出 timeout → result → unlock → reclaim 顺序；向维护者确认契约后再考虑修复。",
-      "evidence": ["https://github.com/LMCache/LMCache/issues/5454", "https://github.com/LMCache/LMCache/issues/5263"]
+      "reviewed_at": "2026-10-04", "mode": "collaborate",
+      "reason": "作者 0andy 在完整正文末尾表示愿意修复。已固定 dev 并完成七场景方法级 CPU mock，补充截止后 DONE 仍不轮询的边界；没有运行完整 pytest 或真实 NIXL，也没有复现 KV 损坏。",
+      "next_step": "审阅 docs/investigations/lmcache-5454/reply-draft.md；明确授权后再发布，向作者确认测试分工及与 #5255 的资源所有权契约。",
+      "evidence": ["https://github.com/LMCache/LMCache/issues/5454", "https://github.com/LMCache/LMCache/issues/5263", "docs/investigations/lmcache-5454/README.md"]
     },
     {
       "repo": "ggml-org/llama.cpp", "kind": "discussion", "number": 29885,

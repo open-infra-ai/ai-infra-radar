@@ -29,13 +29,13 @@ GraphQL 的 connection 参数范围为 1–100；窗口预算不能直接作为�
 `good first issue` 加 15，`help wanted` 加 8。最近 14 天更新加 10，15–45 天加 5，
 超过 120 天减 15。原帖涉及当前未确认的 Hopper/Blackwell/多卡环境减 12；
 大范围 tracker、nightly failure 或 security 标题减 25；有 assignee 减 12。
-检出他人认领或开放的关闭关联 PR 减 18，仅开放相关 PR 减 8。
+检出他人认领或开放的关闭关联 PR 减 18；只有开放相关 PR 或他人作者工作意愿时减 8。
 
 这套规则用于控制阅读顺序；硬件词可能只出现在原报告，不能推出所有验证都需要该
 硬件。尤其 CPU mock 测试仍可能可行。报告中给出词和参与方式，最终适配由人工判断。
 
 关闭 / 已回答条目退出新机会清单。线程尚未检查或评论内容不完整归到 `verify`；
-Discussion 归到 `discuss`；有 assignee、他人认领或关闭关联 PR 归到 `collaborate`；
+Discussion 归到 `discuss`；有 assignee、他人认领、作者工作意愿或关闭关联 PR 归到 `collaborate`；
 只有普通相关 PR 归到 `verify`；无人认领信号的 RFC 归到 `discuss`；其余归到
 `investigate`，仍需读取当前源码。这里的“无认领信号”仅指未检出。
 
@@ -43,6 +43,9 @@ Discussion 归到 `discuss`；有 assignee、他人认领或关闭关联 PR 归�
 
 - 评论中的 `/claim`、I will work 等表达只构成规则信号，释放认领会撤销同一人的信号；
   间接表达、引用、管理员指派或外部协作可能无法识别。
+- 完整正文在摘录截断前识别明确的第一人称工作意愿，保存 `author_work_intent`
+  相关句子摘录；排除代码块、行内代码与引用行。条件性的“愿意修复”仍是意愿，
+  不证明已开工或正式认领。自己的意愿不构成他人竞争工作，机器规则仍需人工核实。
 - Issue 跨引用读取 `CrossReferencedEvent` 的 `willCloseTarget` 和来源 PR 状态，
   不将所有相关 PR 当作修复；新 PR 没有引用 issue 时也可能漏检。
 - 评论分页至预算上限。正文保留前 6000 字符，评论保留前 4000 字符；截断有标记。
@@ -55,7 +58,7 @@ Discussion 归到 `discuss`；有 assignee、他人认领或关闭关联 PR 归�
 
 `data/latest.json` 保存 `schema_version`、`scanned_at`、`coverage_kind`、`coverage`、
 `items`、`shortlist`、`changes`。每个 item 保存来源 URL、状态、日期、正文摘录、
-评论摘录、认领信号、关联 PR、分数依据、主题、参与方式和下一步。
+评论摘录、作者工作意愿、评论认领信号、关联 PR、分数依据、主题、参与方式和下一步。
 
 `detail_checked` 表示尝试完成线程核查，`detail_complete` 表示在所声明范围内没有
 分页 / 评论截断缺口，不表示已审查源代码。`body_truncated` 提醒打开原帖读全文。
