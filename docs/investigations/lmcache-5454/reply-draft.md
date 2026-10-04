@@ -6,28 +6,12 @@
 
 以下英文正文用于上游协作；七场景结果和完整 probe 在私有调查记录中，
 公开评论不能链接只有本人可访问的证据，也不能暗示已运行正式 pytest 或 NIXL。
+按用户要求，先展示完整正文；用户确认这版措辞后再发布。
 
 ---
 
-I traced this on `dev` at `1ca53a8aadca1d054f171fd67350be35797cfddc` and checked
-the control flow using a deterministic CPU probe that executes the unchanged
-`query_load_result` and `query_read_status` method bodies with mocked dependencies.
-This was a method-level check, not the upstream pytest suite or a real NIXL transfer.
+I checked the query methods at [`1ca53a8`](https://github.com/LMCache/LMCache/blob/1ca53a8aadca1d054f171fd67350be35797cfddc/lmcache/v1/distributed/l2_adapters/p2p_l2_adapter.py#L326-L347) using the original code with mocked dependencies. I haven't run a real NIXL transfer.
 
-One additional boundary case may be useful for the eventual regression tests:
-if the first poll happens after the deadline, even a mocked `DONE` transfer is
-reported as an all-zero result without querying its status. The adapter drops its
-task, while the transfer client's task remains and its normal handle-release path
-is not reached. Before the deadline, the same `DONE` case is queried and the handle
-is released once. A `PROC -> timeout -> DONE` sequence also stops polling after
-the timeout. None of this demonstrates actual KV corruption.
+If the first poll is past the deadline, the adapter returns an all-zero bitmap even when the mocked transfer is already `DONE`. It skips the status check and drops the task, so later polls never reach the transfer client's handle cleanup.
 
-This suggests two separate checks: a late result should still be collected, and
-buffers/locks must not be reusable while a transfer can still access them.
-Polling once before the deadline check would address the already-terminal case,
-but would not by itself settle ownership for an in-flight read.
-
-Since you have offered to work on the fix, would additional late-completion tests
-be useful once the intended contract is agreed? Should a non-`None` adapter result
-guarantee that the transfer no longer accesses its buffers, with the caller's
-deadline handled separately along the lines of #5255?
+Could #5255 handle the caller's timeout while the adapter keeps polling until the transfer finishes? I can help test late completion if that's useful.
