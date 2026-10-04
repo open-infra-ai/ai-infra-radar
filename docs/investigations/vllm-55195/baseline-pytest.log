@@ -1,0 +1,220 @@
+Running 23 items in this shard
+........FF.F....FF.....                                                  [100%]
+=================================== FAILURES ===================================
+_____ test_grouped_thinking_markers[-<think>step one-False- step one-None] _____
+
+ernie45_tokenizer = TokenizersBackend(name_or_path='baidu/ERNIE-4.5-21B-A3B-Thinking', vocab_size=100309, model_max_length=100000000000000...,
+	100308: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+})
+previous_text = '', text = '<think>step one', skip_special_tokens = False
+reasoning = ' step one', content = None
+
+    @pytest.mark.parametrize(
+        "previous_text, text, skip_special_tokens, reasoning, content",
+        [
+            ("", "<think>step one", False, " step one", None),
+            ("\n", "<think>step one", False, " step one", None),
+            ("", "<think>step one", True, "step one", None),
+            ("", "<think>step one</think>answer", False, " step one", " answer"),
+        ],
+    )
+    def test_grouped_thinking_markers(
+        ernie45_tokenizer, previous_text, text, skip_special_tokens, reasoning, content
+    ):
+        tokenizer = deepcopy(ernie45_tokenizer)
+        tokenizer.add_tokens(["<think>"], special_tokens=True)
+        parser = ReasoningParserManager.get_reasoning_parser(parser_name)(tokenizer)
+        token_ids = tokenizer.encode(text, add_special_tokens=False)
+        previous_ids = tokenizer.encode(previous_text, add_special_tokens=False)
+        delta_text = tokenizer.decode(token_ids, skip_special_tokens=skip_special_tokens)
+    
+        delta = parser.extract_reasoning_streaming(
+            previous_text,
+            previous_text + delta_text,
+            delta_text,
+            previous_ids,
+            previous_ids + token_ids,
+            token_ids,
+        )
+    
+        assert delta is not None
+>       assert delta.reasoning == reasoning
+E       AssertionError: assert '<think> step one' == ' step one'
+E         
+E         -  step one
+E         + <think> step one
+
+tests/reasoning/test_ernie45_reasoning_parser.py:158: AssertionError
+____ test_grouped_thinking_markers[\n-<think>step one-False- step one-None] ____
+
+ernie45_tokenizer = TokenizersBackend(name_or_path='baidu/ERNIE-4.5-21B-A3B-Thinking', vocab_size=100309, model_max_length=100000000000000...,
+	100308: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+})
+previous_text = '\n', text = '<think>step one', skip_special_tokens = False
+reasoning = ' step one', content = None
+
+    @pytest.mark.parametrize(
+        "previous_text, text, skip_special_tokens, reasoning, content",
+        [
+            ("", "<think>step one", False, " step one", None),
+            ("\n", "<think>step one", False, " step one", None),
+            ("", "<think>step one", True, "step one", None),
+            ("", "<think>step one</think>answer", False, " step one", " answer"),
+        ],
+    )
+    def test_grouped_thinking_markers(
+        ernie45_tokenizer, previous_text, text, skip_special_tokens, reasoning, content
+    ):
+        tokenizer = deepcopy(ernie45_tokenizer)
+        tokenizer.add_tokens(["<think>"], special_tokens=True)
+        parser = ReasoningParserManager.get_reasoning_parser(parser_name)(tokenizer)
+        token_ids = tokenizer.encode(text, add_special_tokens=False)
+        previous_ids = tokenizer.encode(previous_text, add_special_tokens=False)
+        delta_text = tokenizer.decode(token_ids, skip_special_tokens=skip_special_tokens)
+    
+        delta = parser.extract_reasoning_streaming(
+            previous_text,
+            previous_text + delta_text,
+            delta_text,
+            previous_ids,
+            previous_ids + token_ids,
+            token_ids,
+        )
+    
+        assert delta is not None
+>       assert delta.reasoning == reasoning
+E       AssertionError: assert '<think> step one' == ' step one'
+E         
+E         -  step one
+E         + <think> step one
+
+tests/reasoning/test_ernie45_reasoning_parser.py:158: AssertionError
+_ test_grouped_thinking_markers[-<think>step one</think>answer-False- step one- answer] _
+
+ernie45_tokenizer = TokenizersBackend(name_or_path='baidu/ERNIE-4.5-21B-A3B-Thinking', vocab_size=100309, model_max_length=100000000000000...,
+	100308: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+})
+previous_text = '', text = '<think>step one</think>answer'
+skip_special_tokens = False, reasoning = ' step one', content = ' answer'
+
+    @pytest.mark.parametrize(
+        "previous_text, text, skip_special_tokens, reasoning, content",
+        [
+            ("", "<think>step one", False, " step one", None),
+            ("\n", "<think>step one", False, " step one", None),
+            ("", "<think>step one", True, "step one", None),
+            ("", "<think>step one</think>answer", False, " step one", " answer"),
+        ],
+    )
+    def test_grouped_thinking_markers(
+        ernie45_tokenizer, previous_text, text, skip_special_tokens, reasoning, content
+    ):
+        tokenizer = deepcopy(ernie45_tokenizer)
+        tokenizer.add_tokens(["<think>"], special_tokens=True)
+        parser = ReasoningParserManager.get_reasoning_parser(parser_name)(tokenizer)
+        token_ids = tokenizer.encode(text, add_special_tokens=False)
+        previous_ids = tokenizer.encode(previous_text, add_special_tokens=False)
+        delta_text = tokenizer.decode(token_ids, skip_special_tokens=skip_special_tokens)
+    
+        delta = parser.extract_reasoning_streaming(
+            previous_text,
+            previous_text + delta_text,
+            delta_text,
+            previous_ids,
+            previous_ids + token_ids,
+            token_ids,
+        )
+    
+        assert delta is not None
+>       assert delta.reasoning == reasoning
+E       AssertionError: assert '<think> step one' == ' step one'
+E         
+E         -  step one
+E         + <think> step one
+
+tests/reasoning/test_ernie45_reasoning_parser.py:158: AssertionError
+______________________ test_grouped_start_marker[-False] _______________________
+
+hy_v4_tokenizer = TokenizersBackend(name_or_path='tencent/Hy4-preview', vocab_size=120000, model_max_length=1000000000000000019884624838...dToken("<｜hy_place▁holder▁no▁813｜>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+})
+previous_text = '', skip_special_tokens = False
+
+    @pytest.mark.parametrize(
+        "previous_text, skip_special_tokens", [("", False), ("\n", False), ("", True)]
+    )
+    def test_grouped_start_marker(hy_v4_tokenizer, previous_text, skip_special_tokens):
+        tokenizer = deepcopy(hy_v4_tokenizer)
+        parser = HYV4ReasoningParser(tokenizer)
+        tokenizer.add_tokens([parser.reasoning_start_str], special_tokens=True)
+        token_ids = tokenizer.encode(
+            parser.reasoning_start_str + "step one", add_special_tokens=False
+        )
+        delta_text = tokenizer.decode(token_ids, skip_special_tokens=skip_special_tokens)
+        previous_ids = tokenizer.encode(previous_text, add_special_tokens=False)
+    
+        delta = parser.extract_reasoning_streaming(
+            previous_text,
+            previous_text + delta_text,
+            delta_text,
+            previous_ids,
+            previous_ids + token_ids,
+            token_ids,
+        )
+    
+        assert delta is not None
+>       assert delta.reasoning == "step one"
+E       AssertionError: assert '<think:opensource>step one' == 'step one'
+E         
+E         - step one
+E         + <think:opensource>step one
+
+tests/reasoning/test_hy_v4_reasoning_parser.py:40: AssertionError
+_____________________ test_grouped_start_marker[\n-False] ______________________
+
+hy_v4_tokenizer = TokenizersBackend(name_or_path='tencent/Hy4-preview', vocab_size=120000, model_max_length=1000000000000000019884624838...dToken("<｜hy_place▁holder▁no▁813｜>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+})
+previous_text = '\n', skip_special_tokens = False
+
+    @pytest.mark.parametrize(
+        "previous_text, skip_special_tokens", [("", False), ("\n", False), ("", True)]
+    )
+    def test_grouped_start_marker(hy_v4_tokenizer, previous_text, skip_special_tokens):
+        tokenizer = deepcopy(hy_v4_tokenizer)
+        parser = HYV4ReasoningParser(tokenizer)
+        tokenizer.add_tokens([parser.reasoning_start_str], special_tokens=True)
+        token_ids = tokenizer.encode(
+            parser.reasoning_start_str + "step one", add_special_tokens=False
+        )
+        delta_text = tokenizer.decode(token_ids, skip_special_tokens=skip_special_tokens)
+        previous_ids = tokenizer.encode(previous_text, add_special_tokens=False)
+    
+        delta = parser.extract_reasoning_streaming(
+            previous_text,
+            previous_text + delta_text,
+            delta_text,
+            previous_ids,
+            previous_ids + token_ids,
+            token_ids,
+        )
+    
+        assert delta is not None
+>       assert delta.reasoning == "step one"
+E       AssertionError: assert '<think:opensource>step one' == 'step one'
+E         
+E         - step one
+E         + <think:opensource>step one
+
+tests/reasoning/test_hy_v4_reasoning_parser.py:40: AssertionError
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/torch/jit/_script.py:365: 14 warnings
+  /home/shane/github/open-infra-ai/ai-infra-radar/.local/upstream/vllm/.venv/lib/python3.12/site-packages/torch/jit/_script.py:365: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/reasoning/test_ernie45_reasoning_parser.py::test_grouped_thinking_markers[-<think>step one-False- step one-None]
+FAILED tests/reasoning/test_ernie45_reasoning_parser.py::test_grouped_thinking_markers[\n-<think>step one-False- step one-None]
+FAILED tests/reasoning/test_ernie45_reasoning_parser.py::test_grouped_thinking_markers[-<think>step one</think>answer-False- step one- answer]
+FAILED tests/reasoning/test_hy_v4_reasoning_parser.py::test_grouped_start_marker[-False]
+FAILED tests/reasoning/test_hy_v4_reasoning_parser.py::test_grouped_start_marker[\n-False]
+5 failed, 18 passed, 14 warnings in 11.89s

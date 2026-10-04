@@ -1,0 +1,90 @@
+[
+  {
+    "parser": "ernie45",
+    "model": "baidu/ERNIE-4.5-21B-A3B-Thinking",
+    "revision": "4341bb42644d5422859509fa25d41544c57181f8",
+    "shape": "start_only",
+    "ids": [
+      100281,
+      4687,
+      805
+    ],
+    "decoded": "<think> step one",
+    "stream": {
+      "role": null,
+      "content": null,
+      "reasoning": "<think> step one"
+    },
+    "nonstream": [
+      " step one",
+      null
+    ]
+  },
+  {
+    "parser": "ernie45",
+    "model": "baidu/ERNIE-4.5-21B-A3B-Thinking",
+    "revision": "4341bb42644d5422859509fa25d41544c57181f8",
+    "shape": "both_markers",
+    "ids": [
+      100281,
+      4687,
+      805,
+      100282,
+      4646
+    ],
+    "decoded": "<think> step one</think> answer",
+    "stream": {
+      "role": null,
+      "content": " answer",
+      "reasoning": "<think> step one"
+    },
+    "nonstream": [
+      " step one",
+      " answer"
+    ]
+  },
+  {
+    "parser": "hy_v4",
+    "model": "tencent/Hy4-preview",
+    "revision": "705d81ee51566a186d645b74c974d642ef2828fe",
+    "shape": "start_only",
+    "ids": [
+      120029,
+      19803,
+      936
+    ],
+    "decoded": "<think:opensource>step one",
+    "stream": {
+      "role": null,
+      "content": null,
+      "reasoning": "<think:opensource>step one"
+    },
+    "nonstream": [
+      "step one",
+      null
+    ]
+  },
+  {
+    "parser": "hy_v4",
+    "model": "tencent/Hy4-preview",
+    "revision": "705d81ee51566a186d645b74c974d642ef2828fe",
+    "shape": "both_markers",
+    "ids": [
+      120029,
+      19803,
+      936,
+      120030,
+      21533
+    ],
+    "decoded": "<think:opensource>step one</think:opensource>answer",
+    "stream": {
+      "role": null,
+      "content": "answer",
+      "reasoning": "step one"
+    },
+    "nonstream": [
+      "step one",
+      "answer"
+    ]
+  }
+]

@@ -2,6 +2,13 @@
   "schema_version": 1,
   "entries": [
     {
+      "repo": "vllm-project/vllm", "kind": "issue", "number": 55195,
+      "reviewed_at": "2026-10-05", "mode": "collaborate",
+      "reason": "#55210/#56262 已修改基础与 Olmo3 解析器，但未覆盖独立的 Ernie45/HYV4。本轮仅补这两条路径；同一组测试旧源码 5 失败、18 通过，修复后 23 通过；小 Qwen 显式选择解析器的 GPU HTTP/SSE 对照通过，不是原生大模型评测。",
+      "next_step": "先审阅英文评论和具体补丁，再向现有作者确认是否纳入其 PR 或独立补充；不重复认领整个 issue。",
+      "evidence": ["https://github.com/vllm-project/vllm/pull/55210", "https://github.com/vllm-project/vllm/pull/56262", "docs/investigations/vllm-55195/README.md", "docs/investigations/vllm-55195/results.json"]
+    },
+    {
       "repo": "LMCache/LMCache", "kind": "issue", "number": 5454,
       "reviewed_at": "2026-10-04", "mode": "collaborate",
       "reason": "作者 0andy 在完整正文末尾表示愿意修复。已固定 dev 并完成七场景方法级 CPU mock，补充截止后 DONE 仍不轮询的边界；没有运行完整 pytest 或真实 NIXL，也没有复现 KV 损坏。",

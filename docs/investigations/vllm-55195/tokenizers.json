@@ -1,0 +1,155 @@
+[
+  {
+    "model": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "tokenizer_class": "Qwen2Tokenizer",
+    "sample_ids": [
+      151667,
+      9520,
+      825,
+      151668,
+      27,
+      2322,
+      29,
+      9217,
+      522,
+      2322,
+      29
+    ],
+    "special": [
+      [
+        "<think>",
+        151667,
+        false
+      ],
+      [
+        "</think>",
+        151668,
+        false
+      ],
+      [
+        "<response>",
+        null,
+        false
+      ],
+      [
+        "</response>",
+        null,
+        false
+      ],
+      [
+        "<0x0A>",
+        null,
+        false
+      ]
+    ],
+    "decode": "<think>step one</think><response>answer</response>",
+    "decode_skip_special": "<think>step one</think><response>answer</response>"
+  },
+  {
+    "model": "baidu/ERNIE-4.5-21B-A3B-Thinking",
+    "revision": "4341bb42644d5422859509fa25d41544c57181f8",
+    "tokenizer_class": "TokenizersBackend",
+    "sample_ids": [
+      100281,
+      4687,
+      805,
+      100282,
+      100299,
+      4646,
+      100300
+    ],
+    "special": [
+      [
+        "<think>",
+        100281,
+        false
+      ],
+      [
+        "</think>",
+        100282,
+        false
+      ],
+      [
+        "<response>",
+        100299,
+        false
+      ],
+      [
+        "</response>",
+        100300,
+        false
+      ],
+      [
+        "<0x0A>",
+        23,
+        false
+      ]
+    ],
+    "decode": "<think> step one</think><response> answer</response>",
+    "decode_skip_special": "<think> step one</think><response> answer</response>"
+  },
+  {
+    "model": "tencent/Hy4-preview",
+    "revision": "705d81ee51566a186d645b74c974d642ef2828fe",
+    "tokenizer_class": "TokenizersBackend",
+    "sample_ids": [
+      27,
+      37023,
+      29,
+      19803,
+      936,
+      358,
+      37023,
+      1442,
+      10584,
+      29,
+      21533,
+      358,
+      10584,
+      29
+    ],
+    "special": [
+      [
+        "<think>",
+        null,
+        false
+      ],
+      [
+        "</think>",
+        null,
+        false
+      ],
+      [
+        "<response>",
+        null,
+        false
+      ],
+      [
+        "</response>",
+        null,
+        false
+      ],
+      [
+        "<0x0A>",
+        null,
+        false
+      ]
+    ],
+    "decode": "<think>step one</think><response>answer</response>",
+    "decode_skip_special": "<think>step one</think><response>answer</response>",
+    "native_reasoning_markers": {
+      "start": "<think:opensource>",
+      "end": "</think:opensource>",
+      "start_id": 120029,
+      "end_id": 120030
+    },
+    "native_grouped_sample_ids": [
+      120029,
+      19803,
+      936,
+      120030,
+      21533
+    ]
+  }
+]

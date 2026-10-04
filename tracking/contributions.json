@@ -2,6 +2,13 @@
   "schema_version": 1,
   "entries": [
     {
+      "id": "vllm-vllm-issue-55195", "repo": "vllm-project/vllm", "kind": "issue", "number": 55195,
+      "status": "review_pending", "last_action_at": "2026-10-05", "follow_up_on": "2026-10-06",
+      "summary": "已完成 Ernie45/HYV4 独立解析器补丁、23 项正式测试和两个解析器的真实 GPU 流式前后对照；补丁与英文草稿待用户审阅，未公开发布。",
+      "next_step": "用户审阅评论正文；确认后向现有 PR 作者提出补充分工。公开 PR 前逐行理解补丁、运行相关测试，并重新核查上游已有工作。",
+      "evidence": ["https://github.com/vllm-project/vllm/issues/55195", "https://github.com/vllm-project/vllm/pull/55210", "https://github.com/vllm-project/vllm/pull/56262", "docs/investigations/vllm-55195/README.md", "docs/investigations/vllm-55195/results.json", "docs/investigations/vllm-55195/parser.patch", "docs/investigations/vllm-55195/reply-draft.md", "docs/investigations/vllm-55195/pr-draft.md"]
+    },
+    {
       "id": "LMCache-LMCache-issue-5454", "repo": "LMCache/LMCache", "kind": "issue", "number": 5454,
       "status": "awaiting_feedback", "last_action_at": "2026-10-04", "follow_up_on": "2026-10-06",
       "summary": "已发布方法级 CPU mock 验证和已完成传输晚轮询的测试建议，等待作者或维护者反馈。",

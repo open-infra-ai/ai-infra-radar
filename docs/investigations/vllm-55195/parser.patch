@@ -1,0 +1,202 @@
+diff --git a/tests/reasoning/test_ernie45_reasoning_parser.py b/tests/reasoning/test_ernie45_reasoning_parser.py
+index 8c82166..d707f3b 100644
+--- a/tests/reasoning/test_ernie45_reasoning_parser.py
++++ b/tests/reasoning/test_ernie45_reasoning_parser.py
+@@ -1,6 +1,8 @@
+ # SPDX-License-Identifier: Apache-2.0
+ # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+ 
++from copy import deepcopy
++
+ import pytest
+ from transformers import AutoTokenizer, PreTrainedTokenizerBase
+ 
+@@ -122,3 +124,67 @@ def test_reasoning(
+ 
+     assert reasoning == param_dict["reasoning"]
+     assert content == param_dict["content"]
++
++
++@pytest.mark.parametrize(
++    "previous_text, text, skip_special_tokens, reasoning, content",
++    [
++        ("", "<think>step one", False, " step one", None),
++        ("\n", "<think>step one", False, " step one", None),
++        ("", "<think>step one", True, "step one", None),
++        ("", "<think>step one</think>answer", False, " step one", " answer"),
++    ],
++)
++def test_grouped_thinking_markers(
++    ernie45_tokenizer, previous_text, text, skip_special_tokens, reasoning, content
++):
++    tokenizer = deepcopy(ernie45_tokenizer)
++    tokenizer.add_tokens(["<think>"], special_tokens=True)
++    parser = ReasoningParserManager.get_reasoning_parser(parser_name)(tokenizer)
++    token_ids = tokenizer.encode(text, add_special_tokens=False)
++    previous_ids = tokenizer.encode(previous_text, add_special_tokens=False)
++    delta_text = tokenizer.decode(token_ids, skip_special_tokens=skip_special_tokens)
++
++    delta = parser.extract_reasoning_streaming(
++        previous_text,
++        previous_text + delta_text,
++        delta_text,
++        previous_ids,
++        previous_ids + token_ids,
++        token_ids,
++    )
++
++    assert delta is not None
++    assert delta.reasoning == reasoning
++    assert delta.content == content
++
++
++@pytest.mark.parametrize(
++    "previous_text, reasoning, content",
++    [
++        ("", "quote <think> here", None),
++        ("initial reasoning ", "quote <think> here", None),
++        ("<think>initial", "quote <think> here", None),
++        ("<think>initial</think>", None, "quote <think> here"),
++    ],
++)
++def test_start_marker_in_later_delta_is_preserved(
++    ernie45_tokenizer, previous_text, reasoning, content
++):
++    parser = ReasoningParserManager.get_reasoning_parser(parser_name)(ernie45_tokenizer)
++    delta_text = "quote <think> here"
++    previous_ids = ernie45_tokenizer.encode(previous_text, add_special_tokens=False)
++    delta_ids = ernie45_tokenizer.encode(delta_text, add_special_tokens=False)
++
++    delta = parser.extract_reasoning_streaming(
++        previous_text,
++        previous_text + delta_text,
++        delta_text,
++        previous_ids,
++        previous_ids + delta_ids,
++        delta_ids,
++    )
++
++    assert delta is not None
++    assert delta.reasoning == reasoning
++    assert delta.content == content
+diff --git a/tests/reasoning/test_hy_v4_reasoning_parser.py b/tests/reasoning/test_hy_v4_reasoning_parser.py
+new file mode 100644
+index 0000000..35b1843
+--- /dev/null
++++ b/tests/reasoning/test_hy_v4_reasoning_parser.py
+@@ -0,0 +1,80 @@
++# SPDX-License-Identifier: Apache-2.0
++# SPDX-FileCopyrightText: Copyright contributors to the vLLM project
++
++from copy import deepcopy
++
++import pytest
++from transformers import AutoTokenizer
++
++from vllm.reasoning.hy_v4_reasoning_parser import HYV4ReasoningParser
++
++
++@pytest.fixture(scope="module")
++def hy_v4_tokenizer():
++    return AutoTokenizer.from_pretrained("tencent/Hy4-preview")
++
++
++@pytest.mark.parametrize(
++    "previous_text, skip_special_tokens", [("", False), ("\n", False), ("", True)]
++)
++def test_grouped_start_marker(hy_v4_tokenizer, previous_text, skip_special_tokens):
++    tokenizer = deepcopy(hy_v4_tokenizer)
++    parser = HYV4ReasoningParser(tokenizer)
++    tokenizer.add_tokens([parser.reasoning_start_str], special_tokens=True)
++    token_ids = tokenizer.encode(
++        parser.reasoning_start_str + "step one", add_special_tokens=False
++    )
++    delta_text = tokenizer.decode(token_ids, skip_special_tokens=skip_special_tokens)
++    previous_ids = tokenizer.encode(previous_text, add_special_tokens=False)
++
++    delta = parser.extract_reasoning_streaming(
++        previous_text,
++        previous_text + delta_text,
++        delta_text,
++        previous_ids,
++        previous_ids + token_ids,
++        token_ids,
++    )
++
++    assert delta is not None
++    assert delta.reasoning == "step one"
++    assert delta.content is None
++
++
++@pytest.mark.parametrize("include_start_marker", [False, True])
++def test_grouped_reasoning_and_content(hy_v4_tokenizer, include_start_marker):
++    parser = HYV4ReasoningParser(hy_v4_tokenizer)
++    text = "step one" + parser.reasoning_end_str + "answer"
++    if include_start_marker:
++        text = parser.reasoning_start_str + text
++    token_ids = hy_v4_tokenizer.encode(text, add_special_tokens=False)
++    delta_text = hy_v4_tokenizer.decode(token_ids, skip_special_tokens=False)
++
++    delta = parser.extract_reasoning_streaming(
++        "", delta_text, delta_text, [], token_ids, token_ids
++    )
++
++    assert delta is not None
++    assert delta.reasoning == "step one"
++    assert delta.content == "answer"
++
++
++@pytest.mark.parametrize("previous_text", ["", "initial reasoning "])
++def test_literal_start_marker_is_preserved(hy_v4_tokenizer, previous_text):
++    parser = HYV4ReasoningParser(hy_v4_tokenizer)
++    delta_text = "quote " + parser.reasoning_start_str + " here"
++    previous_ids = hy_v4_tokenizer.encode(previous_text, add_special_tokens=False)
++    delta_ids = hy_v4_tokenizer.encode(delta_text, add_special_tokens=False)
++
++    delta = parser.extract_reasoning_streaming(
++        previous_text,
++        previous_text + delta_text,
++        delta_text,
++        previous_ids,
++        previous_ids + delta_ids,
++        delta_ids,
++    )
++
++    assert delta is not None
++    assert delta.reasoning == delta_text
++    assert delta.content is None
+diff --git a/vllm/reasoning/ernie45_reasoning_parser.py b/vllm/reasoning/ernie45_reasoning_parser.py
+index 444467b..52b409e 100644
+--- a/vllm/reasoning/ernie45_reasoning_parser.py
++++ b/vllm/reasoning/ernie45_reasoning_parser.py
+@@ -80,6 +80,15 @@ class Ernie45ReasoningParser(BaseThinkingReasoningParser):
+         ):
+             return None
+ 
++        if (
++            not previous_text.strip()
++            and self.start_token_id in delta_token_ids
++            and self.start_token_id not in previous_token_ids
++            and self.end_token_id not in previous_token_ids
++            and delta_text.lstrip().startswith(self.start_token)
++        ):
++            delta_text = delta_text.split(self.start_token, 1)[-1]
++
+         # No <think> in previous or delta, also need to check for </think>.
+         # Because the model may have generated </think> without <think>
+         if self.end_token_id in delta_token_ids:
+diff --git a/vllm/reasoning/hy_v4_reasoning_parser.py b/vllm/reasoning/hy_v4_reasoning_parser.py
+index eabe6c3..74f176b 100644
+--- a/vllm/reasoning/hy_v4_reasoning_parser.py
++++ b/vllm/reasoning/hy_v4_reasoning_parser.py
+@@ -220,6 +220,10 @@ class HYV4ReasoningExtractor:
+                 content = delta_text[end_index + len(self.end_token) :]
+                 return ReasoningDelta(reasoning=reasoning, content=content or None)
+             else:
++                if not previous_text.strip() and delta_text.lstrip().startswith(
++                    self.start_token
++                ):
++                    delta_text = delta_text.split(self.start_token, 1)[-1]
+                 return ReasoningDelta(reasoning=delta_text, content=None)
+         else:
+             # HYV4: <think> was injected at the end of the prompt, so it never

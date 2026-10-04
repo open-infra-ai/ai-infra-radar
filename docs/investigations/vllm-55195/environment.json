@@ -1,0 +1,15 @@
+{
+  "python": "3.12.3",
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "transformers": "5.18.0",
+    "tokenizers": "0.23.2",
+    "pytest": "9.1.1",
+    "pre-commit": "4.6.2",
+    "ruff": "0.14.0",
+    "xgrammar": "0.2.8"
+  },
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU, 6144, 610.88",
+  "source_base": "bd42276e1e25f540f019381c65994120158aa2a1",
+  "native_wheel_commit": "f98d1fc49361cb50457f6109c3c01a5c77e415b4"
+}

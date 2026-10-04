@@ -29,6 +29,10 @@ Status: implemented
 方法级 CPU mock 只验证实际 Python 方法的控制流，不能写成完整上游测试、NIXL
 传输实验或数据损坏复现；正式修复方案等待作者和维护者确认资源所有权契约。
 
+vLLM 独立解析器补丁的正式测试与小模型 GPU 对照采用
+[独立解析器证据策略](../testing/2026-10-05-independent-parser-evidence.md)，继续将
+原生 tokenizer、服务回归与原生大模型评测分开记录。
+
 ## Alternatives considered
 
 - 扩展现有 Bash scout：迁移成本最低，但评论分页、Discussion 和跨引用需要结构化

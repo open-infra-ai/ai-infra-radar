@@ -1,0 +1,4 @@
+# Preserve raw diagnostic output and patch context without whitespace cleanup.
+docs/investigations/vllm-55195/*.log -whitespace
+docs/investigations/vllm-55195/*.xml -whitespace
+docs/investigations/vllm-55195/*.patch -whitespace
