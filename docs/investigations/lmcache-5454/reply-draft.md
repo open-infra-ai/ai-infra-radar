@@ -1,12 +1,11 @@
-# LMCache #5454 回复草稿
+# LMCache #5454 回复记录
 
-状态：私人草稿，尚未发布。拟发布位置：
-[LMCache/LMCache #5454](https://github.com/LMCache/LMCache/issues/5454)。
-发布前刷新线程与 #5255，避免重复回答已经确定的方向。
+状态：已由用户确认并发布，等待反馈。
+公开链接：[评论](https://github.com/LMCache/LMCache/issues/5454#issuecomment-5976046346)。
+发布账号：`holtwood`；时间（UTC）：`2026-10-04T03:09:26Z`。
 
-以下英文正文用于上游协作；七场景结果和完整 probe 在私有调查记录中，
-公开评论不能链接只有本人可访问的证据，也不能暗示已运行正式 pytest 或 NIXL。
-按用户要求，先展示完整正文；用户确认这版措辞后再发布。
+以下为已发布正文。完整方法级 CPU mock 结果保存在私有调查记录中；
+本轮未运行真实 NIXL 传输或完整上游 pytest。
 
 ---
 

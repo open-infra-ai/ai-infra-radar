@@ -1,6 +1,7 @@
 # LMCache #5454：P2P 超时与传输资源生命周期
 
-调查日期：2026-10-04（北京时间）。本地进度：`drafted`，尚未公开反馈。
+调查日期：2026-10-04（北京时间）。本地进度：`awaiting_feedback`。
+已由用户确认，以 `holtwood` 发布[测试建议](https://github.com/LMCache/LMCache/issues/5454#issuecomment-5976046346)，等待反馈。
 
 适合参与的方式是补充边界验证、协助确定契约，再与作者确认测试分工。
 [原帖](https://github.com/LMCache/LMCache/issues/5454) 作者 `0andy` 已表达愿意修复；
@@ -56,7 +57,7 @@ pytest。任务字典由测试夹具预置，agent 返回值是模拟状态。�
 以下是 2026-10-04 本轮读取 GitHub API 的状态，发布反馈前需要再刷新。
 
 - [#5454](https://github.com/LMCache/LMCache/issues/5454)：开放；作者有条件性的修复意愿；
-  当时没有评论、assignee 或已检出的开放关闭关联 PR。
+  发布前核查时没有评论、assignee 或已检出的开放关闭关联 PR。
 - [#5255](https://github.com/LMCache/LMCache/pull/5255)：开放、尚未合入；读取时 head 为
   `8831de680565e1ca687a1647ed62e222b30416e9`。作者提出 controller 的调用方 deadline
   与 I/O 资源生命周期分离，需确认 P2P 是否应沿用该模型；本轮未验证该 PR 的测试声明。
@@ -67,13 +68,13 @@ pytest。任务字典由测试夹具预置，agent 返回值是模拟状态。�
 
 ## 下一步与退出条件
 
-先审阅 [回复草稿](reply-draft.md)，明确授权后才向上游发布。询问作者和维护者：
-adapter 的非 `None` 结果是否承诺传输已停止访问 buffer，是否倾向采用 #5255 的
-controller deadline 模型，以及是否需要协助补充 late-completion 回归测试。
+已发布的正文与用户确认版本一致，见[回复记录](reply-draft.md)。等待作者或维护者
+反馈，优先确认 late-completion 测试分工与预期契约；之后再决定是否需要进一步
+讨论 adapter 的终止语义和 controller deadline 模型。
 
 获得分工和契约答复后，才在上游分支实现补丁与正式公开接口测试。应验证
 pending → terminal、晚到成功 / 错误、超时后锁和 staging buffer 保留、每个 handle
 只释放一次，以及真实取消失败的回退行为。资源不足时请求协作验证，保持证据边界。
 
-跟进日期设为 2026-10-06；该日期仅是个人审阅提醒，不自动发消息。尚未发布时
-不记为 `submitted`，作者已有修复时转向验证与补测试。
+跟进日期保留为 2026-10-06；该日期仅是个人审阅提醒，不自动发消息。当前已发布
+评论并等待反馈；作者已有修复时转向验证与补测试。

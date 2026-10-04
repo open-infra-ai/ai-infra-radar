@@ -5,13 +5,13 @@
 | 扫描日期 | 抽样条目 | 机会清单 |
 |---|---|---|
 | 2026-10-03 | 518 | [当日报告](daily/2026-10-03.md) |
-| 2026-10-04 | 519 | [当日报告](daily/2026-10-04.md) |
+| 2026-10-04 | 523 | [当日报告](daily/2026-10-04.md) |
 
 ## 当前跟进
 
 | 条目 | 本地进度 | 上游状态 | 跟进日期 | 下一步 |
 |---|---|---|---|---|
-| [LMCache/LMCache #5454](https://github.com/LMCache/LMCache/issues/5454) | drafted | OPEN | 2026-10-06 | 审阅私人草稿并刷新上游线程；明确授权发布后，确认与作者的分工和 #5255 的资源所有权契约。 |
+| [LMCache/LMCache #5454](https://github.com/LMCache/LMCache/issues/5454) | awaiting_feedback | OPEN | 2026-10-06 | 响应具体反馈；确认测试分工和预期契约后，在上游分支补充晚轮询与 handle 清理的回归测试。 |
 | [sgl-project/sglang #36116](https://github.com/sgl-project/sglang/pull/36116) | submitted | OPEN | 2026-10-05 | 阅读当前评审和 CI，确认示例仍与 main 一致，处理具体反馈；有实质更新时再跟进。 |
 | [sgl-project/sglang #36115](https://github.com/sgl-project/sglang/pull/36115) | closed | CLOSED | — | 复盘关闭原因和可迁移测试经验；不把关闭表述为合入。 |
 

@@ -73,7 +73,7 @@ python3 scripts/scan.py
 [配置和数据参考](docs/reference.md)。自动扫描只读取人工台账，不改变你记录的进度。
 
 第一份 [LMCache #5454 调查记录](docs/investigations/lmcache-5454/README.md) 已保存固定版本的
-方法级 CPU 验证、原始结果与协作回复草稿，可作为组织后续参与证据的示例。
+方法级 CPU 验证、原始结果与已发布的协作回复，可作为组织后续参与证据的示例。
 
 ## 文件归属
 

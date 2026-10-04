@@ -3,10 +3,10 @@
   "entries": [
     {
       "id": "LMCache-LMCache-issue-5454", "repo": "LMCache/LMCache", "kind": "issue", "number": 5454,
-      "status": "drafted", "last_action_at": "2026-10-04", "follow_up_on": "2026-10-06",
-      "summary": "完成固定版本源码链路和七场景方法级 CPU mock，准备协作反馈草稿；尚未公开，未复现真实 KV 损坏。",
-      "next_step": "审阅私人草稿并刷新上游线程；明确授权发布后，确认与作者的分工和 #5255 的资源所有权契约。",
-      "evidence": ["https://github.com/LMCache/LMCache/issues/5454", "docs/investigations/lmcache-5454/README.md", "docs/investigations/lmcache-5454/results.json", "docs/investigations/lmcache-5454/reply-draft.md"]
+      "status": "awaiting_feedback", "last_action_at": "2026-10-04", "follow_up_on": "2026-10-06",
+      "summary": "已发布方法级 CPU mock 验证和已完成传输晚轮询的测试建议，等待作者或维护者反馈。",
+      "next_step": "响应具体反馈；确认测试分工和预期契约后，在上游分支补充晚轮询与 handle 清理的回归测试。",
+      "evidence": ["https://github.com/LMCache/LMCache/issues/5454", "docs/investigations/lmcache-5454/README.md", "docs/investigations/lmcache-5454/results.json", "docs/investigations/lmcache-5454/reply-draft.md", "https://github.com/LMCache/LMCache/issues/5454#issuecomment-5976046346"]
     },
     {
       "id": "sglang-36116", "repo": "sgl-project/sglang", "kind": "pull_request", "number": 36116,

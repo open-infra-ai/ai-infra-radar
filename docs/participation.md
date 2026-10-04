@@ -53,7 +53,7 @@ python3 scripts/track.py update LMCache-LMCache-issue-5454 \
 明确这些证据的边界。已有修复 PR 时，优先验证补丁、补充遗漏场景。
 
 已完成的 [LMCache #5454 调查记录](investigations/lmcache-5454/README.md) 展示了
-方法级 CPU probe、源码推断与未验证假设的区分，以及尚未发布的协作反馈草稿。
+方法级 CPU probe、源码推断与未验证假设的区分，以及已发布反馈和持续跟进的记录。
 
 ## 调整人工评估
 

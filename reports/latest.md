@@ -1,8 +1,8 @@
 # AI Infra 贡献机会
 
-扫描时间（UTC）：`2026-10-04T02:09:10+00:00`。
+扫描时间（UTC）：`2026-10-04T03:11:22+00:00`。
 
-覆盖 12 个项目；去重采集 519 个条目，深读 83 个线程。
+覆盖 12 个项目；去重采集 523 个条目，深读 85 个线程。
 近期、入门标签、主线主题和固定条目构成抽样窗口，**不是全量扫描**。分数表示阅读优先级，不表示能解决的概率。
 认领是规则识别信号；未检出认领不代表无人工作。API 跨引用只有 `willCloseTarget` 才是关闭关联。
 
@@ -26,7 +26,7 @@
 
 当前核查：已完成配置范围内线程核查；认领仍需人工确认；作者 0andy 表达工作意愿（需确认是否已开工）: If maintainers agree this is a contract gap, I&#x27;m happy to work on the fix. I&#x27;d especially appreciate guidance on whether the preferred direction is to keep timed-out reads pending until terminal, add a TransferChannel cancell；正文仅保留前 6000 字符，结论需读原帖
 
-下一步：审阅 docs/investigations/lmcache-5454/reply-draft.md；明确授权后再发布，向作者确认测试分工及与 #5255 的资源所有权契约。
+下一步：已发布晚轮询测试建议；等待作者反馈，确认分工和预期契约后补充回归测试。
 
 ### [sgl-project/sglang #42070](https://github.com/sgl-project/sglang/issues/42070)：\[Bug\] HiCacheFile scans the whole store directory on every existence check, so the scheduler stalls as the store grows
 
@@ -106,18 +106,18 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 
 | 条目 | 标题 | 分数 / 主题 | 核查与资源 | 下一步 |
 |---|---|---|---|---|
-| [LMCache/LMCache #5203](https://github.com/LMCache/LMCache/issues/5203) | \[good-first-issue\] tests: convert disagg channel logging to %-format | 66 / Serving 与评测 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [LMCache/LMCache #5185](https://github.com/LMCache/LMCache/issues/5185) | \[good-first-issue\] examples: convert token_dropping experiment logging to %-format | 66 / Serving 与评测 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [LMCache/LMCache #5187](https://github.com/LMCache/LMCache/issues/5187) | \[good-first-issue\] logging: convert top-level LMCache utility logging to %-format | 66 / Serving 与评测 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
 | [sgl-project/sglang #8072](https://github.com/sgl-project/sglang/issues/8072) | \[Feature\] Benchmark with audio input | 65 / Serving 与评测 | 已完成配置范围内线程核查；认领仍需人工确认；相关 PR，需判断是否修复 [sgl-project/sglang #41403](https://github.com/sgl-project/sglang/pull/41403) | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [sgl-project/sglang #2271](https://github.com/sgl-project/sglang/issues/2271) | \[Kernel\] Optimize triton decoding kernels for long context | 64 / Serving 与评测、Kernel 与正确性 | 线程尚未核查；assignee: HaiShaw | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [LMCache/LMCache #5339](https://github.com/LMCache/LMCache/issues/5339) | MP mode: remaining unbounded request-state retention in vLLM client and sidecar prefetch bookkeeping | 63 / KV 与存储、Serving 与评测、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [vllm-project/vllm #47161](https://github.com/vllm-project/vllm/issues/47161) | \[RFC\]: Streaming Derender for Disaggregated Serving | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [vllm-project/vllm #48020](https://github.com/vllm-project/vllm/issues/48020) | \[Bug\]: DeepSeek-V3/V3.1 tool parser drops the tool call when start+end tokens land in the same streaming delta | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [sgl-project/sglang #38846](https://github.com/sgl-project/sglang/issues/38846) | \[Feature\] Expose the effective `max_running_requests` (after the mamba/linear-attention state-cache cap) in `/get_server_info` | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [vllm-project/vllm #41515](https://github.com/vllm-project/vllm/issues/41515) | \[Bug\]:  \[kv_offload+HMA\] Fails on chat subsequent request | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 核查有分页 / 文本截断；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [vllm-project/vllm #51771](https://github.com/vllm-project/vllm/issues/51771) | EAGLE/MTP block drop + prefix caching is untested for hybrid models with ≥3 attention groups (DeepSeek-V4-Flash + DSpark lands there) | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 核查有分页 / 文本截断；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
 
 ## 已有参与与跟进
 
 | 条目 | 本地进度 | 上游状态 | 跟进日期 | 下一步 |
 |---|---|---|---|---|
-| [LMCache/LMCache #5454](https://github.com/LMCache/LMCache/issues/5454) | drafted | OPEN | 2026-10-06 | 审阅私人草稿并刷新上游线程；明确授权发布后，确认与作者的分工和 #5255 的资源所有权契约。 |
+| [LMCache/LMCache #5454](https://github.com/LMCache/LMCache/issues/5454) | awaiting_feedback | OPEN | 2026-10-06 | 响应具体反馈；确认测试分工和预期契约后，在上游分支补充晚轮询与 handle 清理的回归测试。 |
 | [sgl-project/sglang #36116](https://github.com/sgl-project/sglang/pull/36116) | submitted | OPEN | 2026-10-05 | 阅读当前评审和 CI，确认示例仍与 main 一致，处理具体反馈；有实质更新时再跟进。 |
 | [sgl-project/sglang #36115](https://github.com/sgl-project/sglang/pull/36115) | closed | CLOSED | — | 复盘关闭原因和可迁移测试经验；不把关闭表述为合入。 |
 
@@ -128,15 +128,15 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 | 项目 | 近期 issue | 入门标签 | help wanted | Discussion | 标题主题检索 |
 |---|---|---|---|---|---|
 | sgl-project/sglang | 25 / 926（还有更多） | 10 / 49（还有更多） | 10 / 15（还有更多） | 6 / 413（还有更多） | hicache: 15 / 26（还有更多）；cache: 15 / 77（还有更多） |
-| vllm-project/vllm | 25 / 2572（还有更多） | 10 / 21（还有更多） | 10 / 32（还有更多） | 6 / 489（还有更多） | cache: 15 / 305（还有更多）；streaming: 15 / 71（还有更多） |
+| vllm-project/vllm | 25 / 2552（还有更多） | 10 / 21（还有更多） | 10 / 32（还有更多） | 6 / 489（还有更多） | cache: 15 / 303（还有更多）；streaming: 15 / 70（还有更多） |
 | LMCache/LMCache | 25 / 226（还有更多） | 10 / 15（还有更多） | 10 / 16（还有更多） | 6 / 6 | L2: 15 / 23（还有更多）；prefetch: 2 / 2 |
 | flashinfer-ai/flashinfer | 25 / 359（还有更多） | 5 / 5 | 0 / 0 | 6 / 25（还有更多） | — |
-| ggml-org/llama.cpp | 25 / 859（还有更多） | 10 / 17（还有更多） | 10 / 27（还有更多） | 6 / 3725（还有更多） | — |
-| triton-lang/triton | 25 / 894（还有更多） | 0 / 0 | 10 / 17（还有更多） | 6 / 175（还有更多） | — |
+| ggml-org/llama.cpp | 25 / 860（还有更多） | 10 / 17（还有更多） | 10 / 27（还有更多） | 6 / 3725（还有更多） | — |
+| triton-lang/triton | 25 / 895（还有更多） | 0 / 0 | 10 / 17（还有更多） | 6 / 175（还有更多） | — |
 | kvcache-ai/Mooncake | 25 / 314（还有更多） | 2 / 2 | 1 / 1 | 6 / 7（还有更多） | — |
 | NVIDIA/TensorRT-LLM | 25 / 612（还有更多） | 0 / 0 | 0 / 0 | 6 / 180（还有更多） | — |
 | NVIDIA/cutlass | 25 / 464（还有更多） | 2 / 2 | 4 / 4 | 6 / 295（还有更多） | — |
-| pytorch/pytorch | 25 / 14047（还有更多） | 10 / 44（还有更多） | 0 / 0 | 0 / 0 | — |
+| pytorch/pytorch | 25 / 14048（还有更多） | 10 / 44（还有更多） | 0 / 0 | 0 / 0 | — |
 | ray-project/ray | 25 / 2840（还有更多） | 0 / 0 | 0 / 0 | 0 / 0 | — |
 | vllm-project/aibrix | 25 / 353（还有更多） | 8 / 8 | 10 / 18（还有更多） | 0 / 0 | — |
 
@@ -144,6 +144,6 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 
 ## 本轮变化
 
-上游更新 21、首次采集 61
+上游更新 10、首次采集 34
 
 条目离开抽样窗口不能推导已关闭；固定条目与上一轮机会清单会继续核对状态。
