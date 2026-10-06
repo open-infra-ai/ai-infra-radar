@@ -1,19 +1,20 @@
 # 每周参与复盘入口
 
-当前保留最近 3 个扫描日的概览；不等于已完成参与。
+当前保留最近 4 个扫描日的概览；不等于已完成参与。
 
 | 扫描日期 | 抽样条目 | 机会清单 |
 |---|---|---|
 | 2026-10-03 | 518 | [当日报告](daily/2026-10-03.md) |
 | 2026-10-04 | 525 | [当日报告](daily/2026-10-04.md) |
 | 2026-10-05 | 520 | [当日报告](daily/2026-10-05.md) |
+| 2026-10-06 | 528 | [当日报告](daily/2026-10-06.md) |
 
 ## 当前跟进
 
 | 条目 | 本地进度 | 上游状态 | 跟进日期 | 下一步 |
 |---|---|---|---|---|
-| [vllm-project/vllm #55195](https://github.com/vllm-project/vllm/issues/55195) | review_pending | OPEN | 2026-10-06 | 用户审阅评论正文；确认后向现有 PR 作者提出补充分工。公开 PR 前逐行理解补丁、运行相关测试，并重新核查上游已有工作。 |
-| [LMCache/LMCache #5454](https://github.com/LMCache/LMCache/issues/5454) | awaiting_feedback | OPEN | 2026-10-06 | 响应具体反馈；确认测试分工和预期契约后，在上游分支补充晚轮询与 handle 清理的回归测试。 |
+| [vllm-project/vllm #55195](https://github.com/vllm-project/vllm/issues/55195) | review_pending | OPEN | 2026-10-06（到期） | 用户审阅评论正文；确认后向现有 PR 作者提出补充分工。公开 PR 前逐行理解补丁、运行相关测试，并重新核查上游已有工作。 |
+| [LMCache/LMCache #5454](https://github.com/LMCache/LMCache/issues/5454) | awaiting_feedback | OPEN | 2026-10-06（到期） | 响应具体反馈；确认测试分工和预期契约后，在上游分支补充晚轮询与 handle 清理的回归测试。 |
 | [sgl-project/sglang #36116](https://github.com/sgl-project/sglang/pull/36116) | submitted | OPEN | 2026-10-05（到期） | 阅读当前评审和 CI，确认示例仍与 main 一致，处理具体反馈；有实质更新时再跟进。 |
 | [sgl-project/sglang #36115](https://github.com/sgl-project/sglang/pull/36115) | closed | CLOSED | — | 复盘关闭原因和可迁移测试经验；不把关闭表述为合入。 |
 
