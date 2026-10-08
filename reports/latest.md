@@ -1,8 +1,8 @@
 # AI Infra 贡献机会
 
-扫描时间（UTC）：`2026-10-07T07:14:40+00:00`。
+扫描时间（UTC）：`2026-10-08T07:25:00+00:00`。
 
-覆盖 12 个项目；去重采集 519 个条目，深读 88 个线程。
+覆盖 12 个项目；去重采集 526 个条目，深读 89 个线程。
 近期、入门标签、主线主题和固定条目构成抽样窗口，**不是全量扫描**。分数表示阅读优先级，不表示能解决的概率。
 认领是规则识别信号；未检出认领不代表无人工作。API 跨引用只有 `willCloseTarget` 才是关闭关联。
 
@@ -85,18 +85,18 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 | [vllm-project/vllm #60350](https://github.com/vllm-project/vllm/issues/60350) | \[Bug\]: FP8 KV cache startup can OOM because CUDA graph memory is omitted from the cache budget | 60 / KV 与存储、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 | [vllm-project/vllm #59548](https://github.com/vllm-project/vllm/issues/59548) | \[Performance\]: spec-decode boot-to-boot throughput dispersion on L4 (CV up to 13.92%), resolved in 0.30.0 | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认；正文仅保留前 6000 字符，结论需读原帖 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 | [ggml-org/llama.cpp #17488](https://github.com/ggml-org/llama.cpp/issues/17488) | GGUF convert support for Vibevoice | 58 / Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
+| [ggml-org/llama.cpp #29498](https://github.com/ggml-org/llama.cpp/issues/29498) | bug: a client-set `X-Conversation-Id` disables disconnect-cancellation and accumulates uncapped resumable-stream sessions, can cause memory DoS | 56 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 | [triton-lang/triton #12137](https://github.com/triton-lang/triton/issues/12137) | Assertion in TritonAMDGPUCanonicalizePointers: &quot;expected then yield to report fat ptr indices&quot; on a pointer select inside a runtime scf.if | 53 / KV 与存储、Serving 与评测、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
+| [flashinfer-ai/flashinfer #6232](https://github.com/flashinfer-ai/flashinfer/issues/6232) | \[Bug\]\[v0.7.2rc1\] test_mm_bf16_fp4_reference_correctness.py AssertionError: assert &lt;flashinfer.trace.template.TraceTemplate object at 0xfffc5537b9a0&gt; is &lt;flashinfer.trace.template.TraceTemplate object at 0xfffc5537b670&gt; | 50 / Serving 与评测、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 | [ggml-org/llama.cpp #29916](https://github.com/ggml-org/llama.cpp/issues/29916) | llama-quantize: GGML_ASSERT(size mismatch) when quantizing mmproj files containing 3D conv tensors (gemma4v audio conv1d) | 50 / Serving 与评测、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
-| [ggml-org/llama.cpp #30039](https://github.com/ggml-org/llama.cpp/issues/30039) | Vulkan: ~45% prompt processing regression on RDNA1 (gfx1010) between b10455 and b11429 (v0.6.0) with a GDN-hybrid model; TG unchanged | 49 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
-| [kvcache-ai/Mooncake #4487](https://github.com/kvcache-ai/Mooncake/issues/4487) | \[Store\] remove + re-put of the same key never re-offloads with the bucket backend | 46 / KV 与存储、Serving 与评测、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 
 ## 可参与讨论 / 分析
 
 | 条目 | 标题 | 分数 / 主题 | 核查与资源 | 下一步 |
 |---|---|---|---|---|
 | [sgl-project/sglang #41366](https://github.com/sgl-project/sglang/discussions/41366) | llm-vram-calc: zero-dependency CLI VRAM + KV-cache calculator for LLM quantizations | 73 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读完整线程，提出一个有源码依据的解释、反例或最小实验。 |
+| [kvcache-ai/Mooncake #4503](https://github.com/kvcache-ai/Mooncake/issues/4503) | \[RFC\]: a SGLang attention step to KV cache access benchmark | 60 / KV 与存储、Serving 与评测、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认 | 读完整线程，提出一个有源码依据的解释、反例或最小实验。 |
 | [ggml-org/llama.cpp #29885](https://github.com/ggml-org/llama.cpp/discussions/29885) | Restart-proof KV cache for llama-server: 40K-token TTFT 155s to 6s after reboot | 53 / KV 与存储、Serving 与评测、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 阅读作者补丁，设计同前缀/变前缀、模型或 KV dtype 变化、重启与损坏快照的测试矩阵；补充真实测量后再反馈。 |
-| [kvcache-ai/Mooncake #2703](https://github.com/kvcache-ai/Mooncake/issues/2703) | \[RFC\]: Explicit Context Caching — Guaranteed KV Cache Eviction Protection | 49 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认；正文仅保留前 6000 字符，结论需读原帖 | 读完整线程，提出一个有源码依据的解释、反例或最小实验。 |
 | [kvcache-ai/Mooncake #1998](https://github.com/kvcache-ai/Mooncake/issues/1998) | \[RFC\]: Radix Tree Index — Prefix-Aware KV Cache Management and Cascading Eviction | 46 / KV 与存储、Serving 与评测、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认；正文仅保留前 6000 字符，结论需读原帖 | 读完整线程，提出一个有源码依据的解释、反例或最小实验。 |
 | [flashinfer-ai/flashinfer #3736](https://github.com/orgs/flashinfer-ai/discussions/3736) | Performance comparison for dense shared prefix + block-diagonal local mask: custom mask in BatchPrefillWithPagedKVCacheWrapper vs MultiLevelCascadeAttentionWrapper | 43 / KV 与存储、Serving 与评测、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认 | 读完整线程，提出一个有源码依据的解释、反例或最小实验。 |
 | [kvcache-ai/Mooncake #2750](https://github.com/kvcache-ai/Mooncake/issues/2750) | \[RFC\]: EPD Disaggregation and Cooperative Scheduling for Agentic Multimodal Inference（CCF 赛题四） | 43 / KV 与存储、Serving 与评测 | 已完成配置范围内线程核查；认领仍需人工确认；正文仅保留前 6000 字符，结论需读原帖 | 读完整线程，提出一个有源码依据的解释、反例或最小实验。 |
@@ -116,12 +116,12 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 
 | 条目 | 标题 | 分数 / 主题 | 核查与资源 | 下一步 |
 |---|---|---|---|---|
-| [LMCache/LMCache #5187](https://github.com/LMCache/LMCache/issues/5187) | \[good-first-issue\] logging: convert top-level LMCache utility logging to %-format | 66 / Serving 与评测 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [sgl-project/sglang #36333](https://github.com/sgl-project/sglang/issues/36333) | \[Bug\] Disconnected streaming client leaves a zombie request that decodes to max_tokens and floods &quot;state was deleted in TokenizerManager&quot; (regression from #34160 revert) | 70 / Serving 与评测、Kernel 与正确性、工程与测试 | 核查有分页 / 文本截断 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
 | [sgl-project/sglang #8072](https://github.com/sgl-project/sglang/issues/8072) | \[Feature\] Benchmark with audio input | 65 / Serving 与评测 | 已完成配置范围内线程核查；认领仍需人工确认；相关 PR，需判断是否修复 [sgl-project/sglang #41403](https://github.com/sgl-project/sglang/pull/41403) | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [LMCache/LMCache #5185](https://github.com/LMCache/LMCache/issues/5185) | \[good-first-issue\] examples: convert token_dropping experiment logging to %-format | 61 / Serving 与评测 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [sgl-project/sglang #38846](https://github.com/sgl-project/sglang/issues/38846) | \[Feature\] Expose the effective `max_running_requests` (after the mamba/linear-attention state-cache cap) in `/get_server_info` | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [LMCache/LMCache #5339](https://github.com/LMCache/LMCache/issues/5339) | MP mode: remaining unbounded request-state retention in vLLM client and sidecar prefetch bookkeeping | 63 / KV 与存储、Serving 与评测、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [LMCache/LMCache #5203](https://github.com/LMCache/LMCache/issues/5203) | \[good-first-issue\] tests: convert disagg channel logging to %-format | 61 / Serving 与评测 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
 | [vllm-project/vllm #41515](https://github.com/vllm-project/vllm/issues/41515) | \[Bug\]:  \[kv_offload+HMA\] Fails on chat subsequent request | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 核查有分页 / 文本截断；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [vllm-project/vllm #46221](https://github.com/vllm-project/vllm/issues/46221) | \[Feature\]: Add a 2-bit KV-cache quantisation backend from Together AI | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [vllm-project/vllm #47161](https://github.com/vllm-project/vllm/issues/47161) | \[RFC\]: Streaming Derender for Disaggregated Serving | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
 
 ## 已有参与与跟进
 
@@ -138,23 +138,23 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 
 | 项目 | 近期 issue | 入门标签 | help wanted | Discussion | 标题主题检索 |
 |---|---|---|---|---|---|
-| sgl-project/sglang | 25 / 908（还有更多） | 10 / 49（还有更多） | 10 / 15（还有更多） | 6 / 414（还有更多） | hicache: 15 / 28（还有更多）；cache: 15 / 74（还有更多） |
-| vllm-project/vllm | 25 / 2552（还有更多） | 10 / 20（还有更多） | 10 / 30（还有更多） | 6 / 489（还有更多） | cache: 15 / 303（还有更多）；streaming: 15 / 72（还有更多） |
-| LMCache/LMCache | 25 / 229（还有更多） | 10 / 15（还有更多） | 10 / 16（还有更多） | 6 / 6 | L2: 15 / 22（还有更多）；prefetch: 2 / 2 |
-| flashinfer-ai/flashinfer | 25 / 348（还有更多） | 5 / 5 | 0 / 0 | 6 / 25（还有更多） | — |
-| ggml-org/llama.cpp | 25 / 854（还有更多） | 10 / 17（还有更多） | 10 / 27（还有更多） | 6 / 3740（还有更多） | — |
-| triton-lang/triton | 25 / 895（还有更多） | 0 / 0 | 10 / 17（还有更多） | 6 / 175（还有更多） | — |
-| kvcache-ai/Mooncake | 25 / 322（还有更多） | 2 / 2 | 1 / 1 | 6 / 7（还有更多） | — |
-| NVIDIA/TensorRT-LLM | 25 / 619（还有更多） | 0 / 0 | 0 / 0 | 6 / 180（还有更多） | — |
-| NVIDIA/cutlass | 25 / 462（还有更多） | 2 / 2 | 4 / 4 | 6 / 295（还有更多） | — |
-| pytorch/pytorch | 25 / 14058（还有更多） | 10 / 44（还有更多） | 0 / 0 | 0 / 0 | — |
-| ray-project/ray | 25 / 2843（还有更多） | 0 / 0 | 0 / 0 | 0 / 0 | — |
-| vllm-project/aibrix | 25 / 343（还有更多） | 8 / 8 | 10 / 18（还有更多） | 0 / 0 | — |
+| sgl-project/sglang | 25 / 910（还有更多） | 10 / 49（还有更多） | 10 / 15（还有更多） | 6 / 414（还有更多） | hicache: 15 / 28（还有更多）；cache: 15 / 74（还有更多） |
+| vllm-project/vllm | 25 / 2576（还有更多） | 10 / 20（还有更多） | 10 / 30（还有更多） | 6 / 489（还有更多） | cache: 15 / 307（还有更多）；streaming: 15 / 71（还有更多） |
+| LMCache/LMCache | 25 / 227（还有更多） | 10 / 14（还有更多） | 10 / 15（还有更多） | 6 / 6 | L2: 15 / 21（还有更多）；prefetch: 2 / 2 |
+| flashinfer-ai/flashinfer | 25 / 350（还有更多） | 5 / 5 | 0 / 0 | 6 / 25（还有更多） | — |
+| ggml-org/llama.cpp | 25 / 842（还有更多） | 10 / 17（还有更多） | 10 / 27（还有更多） | 6 / 3743（还有更多） | — |
+| triton-lang/triton | 25 / 894（还有更多） | 0 / 0 | 10 / 17（还有更多） | 6 / 175（还有更多） | — |
+| kvcache-ai/Mooncake | 25 / 318（还有更多） | 2 / 2 | 1 / 1 | 6 / 7（还有更多） | — |
+| NVIDIA/TensorRT-LLM | 25 / 624（还有更多） | 0 / 0 | 0 / 0 | 6 / 180（还有更多） | — |
+| NVIDIA/cutlass | 25 / 464（还有更多） | 2 / 2 | 4 / 4 | 6 / 295（还有更多） | — |
+| pytorch/pytorch | 25 / 14075（还有更多） | 10 / 44（还有更多） | 0 / 0 | 0 / 0 | — |
+| ray-project/ray | 25 / 2856（还有更多） | 0 / 0 | 0 / 0 | 0 / 0 | — |
+| vllm-project/aibrix | 25 / 340（还有更多） | 8 / 8 | 10 / 18（还有更多） | 0 / 0 | — |
 
 分母是 API 该窗口的可用条目数；不同窗口可能重叠。固定条目另行刷新，Discussion 关闭或已回答的条目保留数据但不列为新机会。
 
 ## 本轮变化
 
-上游更新 43、首次采集 138
+OPEN → CLOSED 1、上游更新 37、首次采集 163
 
 条目离开抽样窗口不能推导已关闭；固定条目与上一轮机会清单会继续核对状态。
