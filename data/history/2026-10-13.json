@@ -1,0 +1,1653 @@
+{
+  "schema_version": 1,
+  "scanned_at": "2026-10-13T07:42:23+00:00",
+  "sample_count": 534,
+  "coverage": [
+    {
+      "repo": "sgl-project/sglang",
+      "archived": false,
+      "discussions_enabled": true,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 929,
+          "has_more": true
+        },
+        "first": {
+          "returned": 10,
+          "available": 46,
+          "has_more": true
+        },
+        "help": {
+          "returned": 10,
+          "available": 14,
+          "has_more": true
+        },
+        "discussions": {
+          "returned": 6,
+          "available": 415,
+          "has_more": true
+        }
+      },
+      "topic_searches": [
+        {
+          "term": "hicache",
+          "returned": 15,
+          "available": 27,
+          "has_more": true
+        },
+        {
+          "term": "cache",
+          "returned": 15,
+          "available": 76,
+          "has_more": true
+        }
+      ]
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "archived": false,
+      "discussions_enabled": true,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 2608,
+          "has_more": true
+        },
+        "first": {
+          "returned": 10,
+          "available": 20,
+          "has_more": true
+        },
+        "help": {
+          "returned": 10,
+          "available": 30,
+          "has_more": true
+        },
+        "discussions": {
+          "returned": 6,
+          "available": 489,
+          "has_more": true
+        }
+      },
+      "topic_searches": [
+        {
+          "term": "cache",
+          "returned": 15,
+          "available": 313,
+          "has_more": true
+        },
+        {
+          "term": "streaming",
+          "returned": 15,
+          "available": 71,
+          "has_more": true
+        }
+      ]
+    },
+    {
+      "repo": "LMCache/LMCache",
+      "archived": false,
+      "discussions_enabled": true,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 242,
+          "has_more": true
+        },
+        "first": {
+          "returned": 10,
+          "available": 13,
+          "has_more": true
+        },
+        "help": {
+          "returned": 10,
+          "available": 14,
+          "has_more": true
+        },
+        "discussions": {
+          "returned": 6,
+          "available": 7,
+          "has_more": true
+        }
+      },
+      "topic_searches": [
+        {
+          "term": "L2",
+          "returned": 15,
+          "available": 22,
+          "has_more": true
+        },
+        {
+          "term": "prefetch",
+          "returned": 3,
+          "available": 3,
+          "has_more": false
+        }
+      ]
+    },
+    {
+      "repo": "flashinfer-ai/flashinfer",
+      "archived": false,
+      "discussions_enabled": true,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 367,
+          "has_more": true
+        },
+        "first": {
+          "returned": 5,
+          "available": 5,
+          "has_more": false
+        },
+        "help": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        },
+        "discussions": {
+          "returned": 6,
+          "available": 25,
+          "has_more": true
+        }
+      },
+      "topic_searches": []
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "archived": false,
+      "discussions_enabled": true,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 832,
+          "has_more": true
+        },
+        "first": {
+          "returned": 10,
+          "available": 17,
+          "has_more": true
+        },
+        "help": {
+          "returned": 10,
+          "available": 27,
+          "has_more": true
+        },
+        "discussions": {
+          "returned": 6,
+          "available": 3758,
+          "has_more": true
+        }
+      },
+      "topic_searches": []
+    },
+    {
+      "repo": "triton-lang/triton",
+      "archived": false,
+      "discussions_enabled": true,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 910,
+          "has_more": true
+        },
+        "first": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        },
+        "help": {
+          "returned": 10,
+          "available": 17,
+          "has_more": true
+        },
+        "discussions": {
+          "returned": 6,
+          "available": 176,
+          "has_more": true
+        }
+      },
+      "topic_searches": []
+    },
+    {
+      "repo": "kvcache-ai/Mooncake",
+      "archived": false,
+      "discussions_enabled": true,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 329,
+          "has_more": true
+        },
+        "first": {
+          "returned": 2,
+          "available": 2,
+          "has_more": false
+        },
+        "help": {
+          "returned": 1,
+          "available": 1,
+          "has_more": false
+        },
+        "discussions": {
+          "returned": 6,
+          "available": 7,
+          "has_more": true
+        }
+      },
+      "topic_searches": []
+    },
+    {
+      "repo": "NVIDIA/TensorRT-LLM",
+      "archived": false,
+      "discussions_enabled": true,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 641,
+          "has_more": true
+        },
+        "first": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        },
+        "help": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        },
+        "discussions": {
+          "returned": 6,
+          "available": 180,
+          "has_more": true
+        }
+      },
+      "topic_searches": []
+    },
+    {
+      "repo": "NVIDIA/cutlass",
+      "archived": false,
+      "discussions_enabled": true,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 465,
+          "has_more": true
+        },
+        "first": {
+          "returned": 2,
+          "available": 2,
+          "has_more": false
+        },
+        "help": {
+          "returned": 4,
+          "available": 4,
+          "has_more": false
+        },
+        "discussions": {
+          "returned": 6,
+          "available": 295,
+          "has_more": true
+        }
+      },
+      "topic_searches": []
+    },
+    {
+      "repo": "pytorch/pytorch",
+      "archived": false,
+      "discussions_enabled": false,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 14118,
+          "has_more": true
+        },
+        "first": {
+          "returned": 10,
+          "available": 42,
+          "has_more": true
+        },
+        "help": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        },
+        "discussions": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        }
+      },
+      "topic_searches": []
+    },
+    {
+      "repo": "ray-project/ray",
+      "archived": false,
+      "discussions_enabled": false,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 2857,
+          "has_more": true
+        },
+        "first": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        },
+        "help": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        },
+        "discussions": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        }
+      },
+      "topic_searches": []
+    },
+    {
+      "repo": "vllm-project/aibrix",
+      "archived": false,
+      "discussions_enabled": false,
+      "windows": {
+        "recent": {
+          "returned": 25,
+          "available": 359,
+          "has_more": true
+        },
+        "first": {
+          "returned": 8,
+          "available": 8,
+          "has_more": false
+        },
+        "help": {
+          "returned": 10,
+          "available": 22,
+          "has_more": true
+        },
+        "discussions": {
+          "returned": 0,
+          "available": 0,
+          "has_more": false
+        }
+      },
+      "topic_searches": []
+    }
+  ],
+  "changes": [
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/42070",
+      "change": "OPEN → CLOSED"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61314",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61313",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61316",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61318",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/44276",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/60494",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61239",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/57228",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43958",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/32335",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61208",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/5529",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43699",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43961",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43965",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61024",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/5270",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/discussions/5676",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43956",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61231",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/5675",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/39499",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43929",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43949",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/41230",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/52911",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/57149",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/58647",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/59575",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/40877",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61337",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/4541",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/4543",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/5678",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/27149",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/27638",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/30199",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/30307",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/30409",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/30426",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/2898",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/37519",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43519",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43930",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/60838",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61229",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61281",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/42012",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/42752",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43992",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/50416",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/60845",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/60914",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61225",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/4544",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/4546",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43931",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12243",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12244",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/24440",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/28812",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4565",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/57572",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/60703",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61170",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/4539",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/24460",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/28801",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/30436",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12242",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12252",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/47930",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/59415",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/59755",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/60860",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61305",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61327",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61330",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20138",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/2910",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/2911",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4584",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4591",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12257",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/4534",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/4071",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/LMCache/LMCache/issues/4715",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/21302",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43987",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43988",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/56700",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/61160",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/26873",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/28807",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/28808",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/28826",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/30301",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/30357",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/30364",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/30424",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/2832",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4536",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4557",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4592",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4598",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200706",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12240",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12241",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12258",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12259",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6352",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/21788",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43557",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/aibrix/issues/2994",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/60561",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/28804",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/30387",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/30428",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/2713",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200729",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200731",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12239",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12254",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12255",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12256",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/triton-lang/triton/issues/12260",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200645",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43098",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/43979",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/vllm/issues/58241",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/19032",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/25147",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/26321",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/28249",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/28650",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/28790",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/29067",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/33522",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/5998",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6389",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/123890",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/191009",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/195219",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/198595",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/198596",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200244",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/66928",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/aibrix/issues/3032",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/aibrix/issues/3037",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6333",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6409",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/29830",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3508",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3513",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3539",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3632",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3735",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200404",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200596",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200625",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200713",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200723",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200726",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200727",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200728",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200732",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/66843",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/66933",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/66935",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/aibrix/issues/3031",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/aibrix/issues/3039",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/5258",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6184",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6347",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6350",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6399",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/sgl-project/sglang/issues/37451",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3500",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3501",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3509",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3514",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3602",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3734",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200347",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200568",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200734",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200747",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/53591",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/66946",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/aibrix/issues/1179",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20141",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20184",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20186",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20187",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6075",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6391",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ggml-org/llama.cpp/issues/24840",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/vllm-project/aibrix/issues/3034",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20083",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20169",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/64833",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20185",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4361",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200478",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/pytorch/pytorch/issues/200623",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/65782",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/66945",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20170",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20182",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/issues/20183",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/ray-project/ray/issues/66930",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/vllm-project/aibrix/issues/3021",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/4254",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/5719",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3504",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/NVIDIA/cutlass/issues/3533",
+      "change": "首次采集"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4568",
+      "change": "上游更新"
+    },
+    {
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/4609",
+      "change": "首次采集"
+    }
+  ],
+  "shortlist": [
+    {
+      "repo": "vllm-project/vllm",
+      "kind": "issue",
+      "number": 61314,
+      "title": "[Bug]: quantization=\"fp8\" + kv_cache_dtype=\"float16\" on a bf16 model crashes at startup — same flash-attn dtype assert as #60859, now on the online-quant path",
+      "url": "https://github.com/vllm-project/vllm/issues/61314",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T03:21:56Z",
+      "score": 66,
+      "mode": "investigate",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "Kernel 与正确性",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "sgl-project/sglang",
+      "kind": "discussion",
+      "number": 41366,
+      "title": "llm-vram-calc: zero-dependency CLI VRAM + KV-cache calculator for LLM quantizations",
+      "url": "https://github.com/sgl-project/sglang/discussions/41366",
+      "state": "OPEN",
+      "updated_at": "2026-09-26T18:56:18Z",
+      "score": 68,
+      "mode": "discuss",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "Kernel 与正确性",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "LMCache/LMCache",
+      "kind": "issue",
+      "number": 5402,
+      "title": "[good-first-issue] tests: make flaky vllm_bench throughput comparisons reproducible",
+      "url": "https://github.com/LMCache/LMCache/issues/5402",
+      "state": "OPEN",
+      "updated_at": "2026-10-06T08:24:22Z",
+      "score": 68,
+      "mode": "collaborate",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "sgl-project/sglang",
+      "kind": "issue",
+      "number": 36333,
+      "title": "[Bug] Disconnected streaming client leaves a zombie request that decodes to max_tokens and floods \"state was deleted in TokenizerManager\" (regression from #34160 revert)",
+      "url": "https://github.com/sgl-project/sglang/issues/36333",
+      "state": "OPEN",
+      "updated_at": "2026-10-09T09:54:12Z",
+      "score": 70,
+      "mode": "verify",
+      "topics": [
+        "Serving 与评测",
+        "Kernel 与正确性",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "flashinfer-ai/flashinfer",
+      "kind": "issue",
+      "number": 6305,
+      "title": "[Bug][v0.7.2rc2] tests/attention/test_cudnn_wrapper_regressions.py::test_paged_prefill_default_scale_layout_lse[True-ln-NHD] AssertionError: Tensor-likes are not close!  Mismatched elements: 4985 / 5120 (97.4%)",
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6305",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T02:19:17Z",
+      "score": 60,
+      "mode": "investigate",
+      "topics": [
+        "Serving 与评测",
+        "Kernel 与正确性",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "kind": "discussion",
+      "number": 29885,
+      "title": "Restart-proof KV cache for llama-server: 40K-token TTFT 155s to 6s after reboot",
+      "url": "https://github.com/ggml-org/llama.cpp/discussions/29885",
+      "state": "OPEN",
+      "updated_at": "2026-10-03T14:08:35Z",
+      "score": 53,
+      "mode": "discuss",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "LMCache/LMCache",
+      "kind": "issue",
+      "number": 5403,
+      "title": "[good-first-issue] tests: preserve phase timings for flaky long_doc_qa TTFT checks",
+      "url": "https://github.com/LMCache/LMCache/issues/5403",
+      "state": "OPEN",
+      "updated_at": "2026-09-30T23:31:33Z",
+      "score": 68,
+      "mode": "collaborate",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "LMCache/LMCache",
+      "kind": "issue",
+      "number": 5187,
+      "title": "[good-first-issue] logging: convert top-level LMCache utility logging to %-format",
+      "url": "https://github.com/LMCache/LMCache/issues/5187",
+      "state": "OPEN",
+      "updated_at": "2026-09-22T14:41:15Z",
+      "score": 61,
+      "mode": "verify",
+      "topics": [
+        "Serving 与评测"
+      ]
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "kind": "issue",
+      "number": 59548,
+      "title": "[Performance]: spec-decode boot-to-boot throughput dispersion on L4 (CV up to 13.92%), resolved in 0.30.0",
+      "url": "https://github.com/vllm-project/vllm/issues/59548",
+      "state": "OPEN",
+      "updated_at": "2026-10-05T05:02:40Z",
+      "score": 59,
+      "mode": "investigate",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "Kernel 与正确性",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "kvcache-ai/Mooncake",
+      "kind": "issue",
+      "number": 1998,
+      "title": "[RFC]: Radix Tree Index — Prefix-Aware KV Cache Management and Cascading Eviction",
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/1998",
+      "state": "OPEN",
+      "updated_at": "2026-10-07T03:18:23Z",
+      "score": 46,
+      "mode": "discuss",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "Kernel 与正确性"
+      ]
+    },
+    {
+      "repo": "LMCache/LMCache",
+      "kind": "issue",
+      "number": 5404,
+      "title": "[good-first-issue] tests: retain L2 diagnostics when flaky TTFT checks fail",
+      "url": "https://github.com/LMCache/LMCache/issues/5404",
+      "state": "OPEN",
+      "updated_at": "2026-09-29T22:17:38Z",
+      "score": 68,
+      "mode": "collaborate",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "LMCache/LMCache",
+      "kind": "issue",
+      "number": 5205,
+      "title": "[good-first-issue] lint: remove stale G004 ignores for clean connector adapters",
+      "url": "https://github.com/LMCache/LMCache/issues/5205",
+      "state": "OPEN",
+      "updated_at": "2026-09-23T05:01:35Z",
+      "score": 61,
+      "mode": "verify",
+      "topics": [
+        "Serving 与评测"
+      ]
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "kind": "issue",
+      "number": 17488,
+      "title": "GGUF convert support for Vibevoice",
+      "url": "https://github.com/ggml-org/llama.cpp/issues/17488",
+      "state": "OPEN",
+      "updated_at": "2026-09-01T11:25:16Z",
+      "score": 58,
+      "mode": "investigate",
+      "topics": [
+        "Kernel 与正确性"
+      ]
+    },
+    {
+      "repo": "kvcache-ai/Mooncake",
+      "kind": "issue",
+      "number": 2898,
+      "title": "[RFC]: Parallelize long-running Mooncake Store unit tests",
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/2898",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T03:31:27Z",
+      "score": 46,
+      "mode": "discuss",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "sgl-project/sglang",
+      "kind": "issue",
+      "number": 3050,
+      "title": "[Bug] Decode Throughput Inconsistency Between bench_serving and Engine Logs",
+      "url": "https://github.com/sgl-project/sglang/issues/3050",
+      "state": "OPEN",
+      "updated_at": "2026-09-03T11:15:16Z",
+      "score": 59,
+      "mode": "collaborate",
+      "topics": [
+        "Serving 与评测",
+        "Kernel 与正确性"
+      ]
+    },
+    {
+      "repo": "sgl-project/sglang",
+      "kind": "issue",
+      "number": 40232,
+      "title": "[Bug] HiCache staged write-back: the 128 KiB batch path passes registered host VAs to cudaMemcpyBatchAsync and faults where CanUseHostPointerForRegisteredMem == 0",
+      "url": "https://github.com/sgl-project/sglang/issues/40232",
+      "state": "OPEN",
+      "updated_at": "2026-09-21T10:54:04Z",
+      "score": 61,
+      "mode": "verify",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "Kernel 与正确性",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "kind": "issue",
+      "number": 29498,
+      "title": "bug: a client-set `X-Conversation-Id` disables disconnect-cancellation and accumulates uncapped resumable-stream sessions, can cause memory DoS",
+      "url": "https://github.com/ggml-org/llama.cpp/issues/29498",
+      "state": "OPEN",
+      "updated_at": "2026-10-07T19:41:40Z",
+      "score": 56,
+      "mode": "investigate",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "Kernel 与正确性",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "flashinfer-ai/flashinfer",
+      "kind": "discussion",
+      "number": 3736,
+      "title": "Performance comparison for dense shared prefix + block-diagonal local mask: custom mask in BatchPrefillWithPagedKVCacheWrapper vs MultiLevelCascadeAttentionWrapper",
+      "url": "https://github.com/orgs/flashinfer-ai/discussions/3736",
+      "state": "OPEN",
+      "updated_at": "2026-06-29T04:39:34Z",
+      "score": 43,
+      "mode": "discuss",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "Kernel 与正确性"
+      ]
+    },
+    {
+      "repo": "sgl-project/sglang",
+      "kind": "issue",
+      "number": 2272,
+      "title": "[Kernel] cuDNN attention backend",
+      "url": "https://github.com/sgl-project/sglang/issues/2272",
+      "state": "OPEN",
+      "updated_at": "2026-09-21T22:43:28Z",
+      "score": 56,
+      "mode": "collaborate",
+      "topics": [
+        "Kernel 与正确性"
+      ]
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "kind": "issue",
+      "number": 38175,
+      "title": "[RFC]: Support ViT Full CUDA Graph (Tracker)",
+      "url": "https://github.com/vllm-project/vllm/issues/38175",
+      "state": "OPEN",
+      "updated_at": "2026-10-08T06:01:23Z",
+      "score": 61,
+      "mode": "verify",
+      "topics": [
+        "Serving 与评测",
+        "Kernel 与正确性"
+      ]
+    },
+    {
+      "repo": "ggml-org/llama.cpp",
+      "kind": "issue",
+      "number": 29916,
+      "title": "llama-quantize: GGML_ASSERT(size mismatch) when quantizing mmproj files containing 3D conv tensors (gemma4v audio conv1d)",
+      "url": "https://github.com/ggml-org/llama.cpp/issues/29916",
+      "state": "OPEN",
+      "updated_at": "2026-10-03T17:41:07Z",
+      "score": 50,
+      "mode": "investigate",
+      "topics": [
+        "Serving 与评测",
+        "Kernel 与正确性"
+      ]
+    },
+    {
+      "repo": "kvcache-ai/Mooncake",
+      "kind": "issue",
+      "number": 2866,
+      "title": "[RFC]: TENT Hierarchical QoS Budget Enforcement and Work-Conserving Scheduling",
+      "url": "https://github.com/kvcache-ai/Mooncake/issues/2866",
+      "state": "OPEN",
+      "updated_at": "2026-10-11T03:19:41Z",
+      "score": 43,
+      "mode": "discuss",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测"
+      ]
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "kind": "issue",
+      "number": 9129,
+      "title": "[Misc]: CMake Clean-up / Refactor Tasks",
+      "url": "https://github.com/vllm-project/vllm/issues/9129",
+      "state": "OPEN",
+      "updated_at": "2026-10-02T16:42:54Z",
+      "score": 55,
+      "mode": "collaborate",
+      "topics": [
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "vllm-project/vllm",
+      "kind": "issue",
+      "number": 41515,
+      "title": "[Bug]:  [kv_offload+HMA] Fails on chat subsequent request",
+      "url": "https://github.com/vllm-project/vllm/issues/41515",
+      "state": "OPEN",
+      "updated_at": "2026-10-04T02:18:30Z",
+      "score": 59,
+      "mode": "verify",
+      "topics": [
+        "KV 与存储",
+        "Serving 与评测",
+        "Kernel 与正确性",
+        "工程与测试"
+      ]
+    },
+    {
+      "repo": "flashinfer-ai/flashinfer",
+      "kind": "issue",
+      "number": 6334,
+      "title": "[Bug][v0.7.2rc2] test_batch_prefill_kernels.py timeout on Rtx Pro 6000",
+      "url": "https://github.com/flashinfer-ai/flashinfer/issues/6334",
+      "state": "OPEN",
+      "updated_at": "2026-10-11T12:48:31Z",
+      "score": 43,
+      "mode": "investigate",
+      "topics": [
+        "Serving 与评测",
+        "Kernel 与正确性"
+      ]
+    }
+  ]
+}
