@@ -1,8 +1,8 @@
 # AI Infra 贡献机会
 
-扫描时间（UTC）：`2026-10-23T06:02:34+00:00`。
+扫描时间（UTC）：`2026-10-24T05:53:19+00:00`。
 
-覆盖 12 个项目；去重采集 539 个条目，深读 88 个线程。
+覆盖 12 个项目；去重采集 532 个条目，深读 88 个线程。
 近期、入门标签、主线主题和固定条目构成抽样窗口，**不是全量扫描**。分数表示阅读优先级，不表示能解决的概率。
 认领是规则识别信号；未检出认领不代表无人工作。API 跨引用只有 `willCloseTarget` 才是关闭关联。
 
@@ -82,13 +82,13 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 
 | 条目 | 标题 | 分数 / 主题 | 核查与资源 | 下一步 |
 |---|---|---|---|---|
-| [LMCache/LMCache #5848](https://github.com/LMCache/LMCache/issues/5848) | \[Feature Request\]\[MP\] Concurrent multi-turn benchmark for memory-budget-aware KV offload and retrieval | 63 / KV 与存储、Serving 与评测、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 | [sgl-project/sglang #44786](https://github.com/sgl-project/sglang/issues/44786) | \[RFC / Feature\] SPICY-KV: 28.6x–50x Pre-RoPE Algebraic Multigrid KV Compression for RadixAttention &amp; Long-CoT (91.7%–100% RULER Recall &amp; 100% Shared-Prefix Multi-Query Reuse) | 63 / KV 与存储、Serving 与评测、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 | [flashinfer-ai/flashinfer #6305](https://github.com/flashinfer-ai/flashinfer/issues/6305) | \[Bug\]\[v0.7.2rc2\] tests/attention/test_cudnn_wrapper_regressions.py::test_paged_prefill_default_scale_layout_lse\[True-ln-NHD\] AssertionError: Tensor-likes are not close!  Mismatched elements: 4985 / 5120 (97.4%) | 60 / Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 | [vllm-project/vllm #49261](https://github.com/vllm-project/vllm/issues/49261) | \[Bug\]: Persistent KV offload cache is not namespaced by model revision | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
-| [vllm-project/vllm #63003](https://github.com/vllm-project/vllm/issues/63003) | \[Bug\]: MiniMax-M3 ViT mRoPE setup BLOCK_N=32 exceeds UB capacity on Ascend A5 | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
+| [vllm-project/vllm #60581](https://github.com/vllm-project/vllm/issues/60581) | \[Usage\]: ROCm gfx950: MXFP4 activation quant not fused into GEMM; Quark INT4 W4A16 uses a very slow Triton kernel | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认；正文仅保留前 6000 字符，结论需读原帖 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 | [ggml-org/llama.cpp #29078](https://github.com/ggml-org/llama.cpp/issues/29078) | convert_hf_to_gguf.py: very large models need either the full model in RAM or 2x its size on disk (streaming two-pass mode?) | 53 / Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
-| [ggml-org/llama.cpp #29241](https://github.com/ggml-org/llama.cpp/issues/29241) | Eval bug: \[SYCL\]\[mtmd\] llama-mtmd-cli aborts with 0xC0000409 after threadpool init on Intel Arc Pro B70 (Windows) — before image encode | 49 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
+| [ggml-org/llama.cpp #28484](https://github.com/ggml-org/llama.cpp/issues/28484) | Misc. bug: Regression- draft-MTP over RPC split generation is 25-30% slower - drafter acceptance unchanged, dense decode unchanged | 49 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
+| [flashinfer-ai/flashinfer #7101](https://github.com/flashinfer-ai/flashinfer/issues/7101) | \[Bug\] unified_moe cuDNN BF16 reference-check failures recur on VR_NVL72 | 46 / Serving 与评测、Kernel 与正确性、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认 | 读当前源码与贡献指南，验证最小复现和测试范围，再确认是否有重复工作。 |
 
 ## 可参与讨论 / 分析
 
@@ -110,18 +110,18 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 | [LMCache/LMCache #5313](https://github.com/LMCache/LMCache/issues/5313) | \[good-first-issue\] tests: stabilize flaky CI tests from recent PRs | 53 / Serving 与评测、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认；评论认领信号: VinsmokeSanji33, Zhou-Kan；正文仅保留前 6000 字符，结论需读原帖 | 先读作者意愿、认领评论与相关 PR，确认分工后补充测试、复现或评审证据。 |
 | [vllm-project/vllm #32335](https://github.com/vllm-project/vllm/issues/32335) | \[Feature\]: Extract KV-Cache update from all attention backends | 53 / KV 与存储、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认；assignee: VedantMadane, pragun-ananda, Mohit-Gaur, Prathmesh234, adityakamat24, Etelis, dorhuri123, dw2761, Kare0638；评论认领信号: Etelis, Kare0638, kaushik-rohit；相关 PR，需判断是否修复 [vllm-project/vllm #33405](https://github.com/vllm-project/vllm/pull/33405)；相关 PR，需判断是否修复 [vllm-project/vllm #41270](https://github.com/vllm-project/vllm/pull/41270)；相关 PR，需判断是否修复 [vllm-project/vllm #62951](https://github.com/vllm-project/vllm/pull/62951) | 先读作者意愿、认领评论与相关 PR，确认分工后补充测试、复现或评审证据。 |
 | [LMCache/LMCache #3372](https://github.com/LMCache/LMCache/issues/3372) | \[Onboarding 2026\] Good first issues — start contributing to LMCache in one PR | 51 / Serving 与评测、工程与测试 | 已完成配置范围内线程核查；认领仍需人工确认；评论认领信号: MANVIS10, maobaolong；相关 PR，需判断是否修复 [LMCache/LMCache #4110](https://github.com/LMCache/LMCache/pull/4110)；相关 PR，需判断是否修复 [LMCache/LMCache #4695](https://github.com/LMCache/LMCache/pull/4695)；相关 PR，需判断是否修复 [LMCache/LMCache #4792](https://github.com/LMCache/LMCache/pull/4792) | 先读作者意愿、认领评论与相关 PR，确认分工后补充测试、复现或评审证据。 |
-| [flashinfer-ai/flashinfer #5878](https://github.com/flashinfer-ai/flashinfer/issues/5878) | bug(sampling): top_k_arr/min_p_arr are validated against input rows but indexed by output row, reading out of bounds when indices is longer than probs | 46 / KV 与存储、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认；原帖涉及 B200, SM100；确认本机路径；人工评估超过 14 天，需更新 | 核对 #5921 及 per-row seed/offset 语义，补充 indices 乱序、重复、长度变化的边界测试。 |
+| [LMCache/LMCache #1175](https://github.com/LMCache/LMCache/issues/1175) | KV-Cache Persistence Issue with SSD Offloading | 48 / KV 与存储、Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认；评论认领信号: fourierr, koopatroopa787；关闭关联 PR [LMCache/LMCache #4778](https://github.com/LMCache/LMCache/pull/4778) | 先读作者意愿、认领评论与相关 PR，确认分工后补充测试、复现或评审证据。 |
 
 ## 需进一步核查
 
 | 条目 | 标题 | 分数 / 主题 | 核查与资源 | 下一步 |
 |---|---|---|---|---|
-| [sgl-project/sglang #1715](https://github.com/sgl-project/sglang/issues/1715) | \[Feature\] Cascade attention kernels  | 65 / Kernel 与正确性 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [sgl-project/sglang #8072](https://github.com/sgl-project/sglang/issues/8072) | \[Feature\] Benchmark with audio input | 60 / Serving 与评测 | 已完成配置范围内线程核查；认领仍需人工确认；相关 PR，需判断是否修复 [sgl-project/sglang #41403](https://github.com/sgl-project/sglang/pull/41403) | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [vllm-project/vllm #40388](https://github.com/vllm-project/vllm/issues/40388) | \[Bug\]:  Gemma 4 fails to initialize with per-token-head KV cache quantization | 60 / KV 与存储、Kernel 与正确性 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [vllm-project/vllm #60581](https://github.com/vllm-project/vllm/issues/60581) | \[Usage\]: ROCm gfx950: MXFP4 activation quant not fused into GEMM; Quark INT4 W4A16 uses a very slow Triton kernel | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [LMCache/LMCache #5339](https://github.com/LMCache/LMCache/issues/5339) | MP mode: remaining unbounded request-state retention in vLLM client and sidecar prefetch bookkeeping | 58 / KV 与存储、Serving 与评测、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
-| [ggml-org/llama.cpp #17488](https://github.com/ggml-org/llama.cpp/issues/17488) | GGUF convert support for Vibevoice | 55 / Kernel 与正确性 | 已完成配置范围内线程核查；认领仍需人工确认；相关 PR，需判断是否修复 [ggml-org/llama.cpp #30530](https://github.com/ggml-org/llama.cpp/pull/30530) | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [sgl-project/sglang #1763](https://github.com/sgl-project/sglang/issues/1763) | \[Feature\] Request to 8-bit Quantization of Attention with SageAttention | 65 / Kernel 与正确性 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [sgl-project/sglang #12562](https://github.com/sgl-project/sglang/issues/12562) | \[Feature\] Simplify `tree_speculative_sampling_target_only` | 65 / Kernel 与正确性 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [vllm-project/vllm #47601](https://github.com/vllm-project/vllm/issues/47601) | \[Performance\]: benchmark speed &amp; precision of rust preproc vs pytorch | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [vllm-project/vllm #47903](https://github.com/vllm-project/vllm/issues/47903) | \[Bug\]: A tool call truncated by max_tokens diverges between streaming and non-streaming, and leaks raw &lt;tool_call&gt; markup into content (non-streaming) | 59 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查；正文仅保留前 6000 字符，结论需读原帖 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [LMCache/LMCache #5751](https://github.com/LMCache/LMCache/issues/5751) | \[Onboarding 2026\] Good second issues — next step after your first PR | 57 / Serving 与评测、Kernel 与正确性、工程与测试 | 线程尚未核查 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
+| [ggml-org/llama.cpp #27734](https://github.com/ggml-org/llama.cpp/issues/27734) | Vulkan: ~78% decode throughput cliff at 131072 context — suballocation fragmentation; fixed via GGML_VK_SUBALLOCATION_BLOCK_SIZE=4 GiB | 56 / KV 与存储、Serving 与评测、Kernel 与正确性、工程与测试 | 核查有分页 / 文本截断 | 补齐线程、关联 PR 与当前源码核查，再判断参与方式。 |
 
 ## 已有参与与跟进
 
@@ -138,23 +138,23 @@ MP connector 的 producer/consumer 角色是跨模块语义问题，可用源码
 
 | 项目 | 近期 issue | 入门标签 | help wanted | Discussion | 标题主题检索 |
 |---|---|---|---|---|---|
-| sgl-project/sglang | 25 / 964（还有更多） | 10 / 46（还有更多） | 10 / 14（还有更多） | 6 / 417（还有更多） | hicache: 15 / 32（还有更多）；cache: 15 / 85（还有更多） |
-| vllm-project/vllm | 25 / 2695（还有更多） | 10 / 17（还有更多） | 10 / 28（还有更多） | 6 / 489（还有更多） | cache: 15 / 317（还有更多）；streaming: 15 / 69（还有更多） |
-| LMCache/LMCache | 25 / 240（还有更多） | 5 / 5 | 7 / 7 | 6 / 7（还有更多） | L2: 15 / 24（还有更多）；prefetch: 3 / 3 |
-| flashinfer-ai/flashinfer | 25 / 410（还有更多） | 5 / 5 | 0 / 0 | 6 / 25（还有更多） | — |
-| ggml-org/llama.cpp | 25 / 785（还有更多） | 10 / 17（还有更多） | 10 / 26（还有更多） | 6 / 3797（还有更多） | — |
-| triton-lang/triton | 25 / 922（还有更多） | 0 / 0 | 10 / 17（还有更多） | 6 / 178（还有更多） | — |
-| kvcache-ai/Mooncake | 25 / 353（还有更多） | 2 / 2 | 1 / 1 | 6 / 7（还有更多） | — |
+| sgl-project/sglang | 25 / 962（还有更多） | 10 / 46（还有更多） | 10 / 14（还有更多） | 6 / 417（还有更多） | hicache: 15 / 35（还有更多）；cache: 15 / 84（还有更多） |
+| vllm-project/vllm | 25 / 2703（还有更多） | 10 / 17（还有更多） | 10 / 27（还有更多） | 6 / 489（还有更多） | cache: 15 / 319（还有更多）；streaming: 15 / 72（还有更多） |
+| LMCache/LMCache | 25 / 242（还有更多） | 5 / 5 | 7 / 7 | 6 / 7（还有更多） | L2: 15 / 24（还有更多）；prefetch: 3 / 3 |
+| flashinfer-ai/flashinfer | 25 / 408（还有更多） | 5 / 5 | 0 / 0 | 6 / 25（还有更多） | — |
+| ggml-org/llama.cpp | 25 / 791（还有更多） | 10 / 17（还有更多） | 10 / 26（还有更多） | 6 / 3803（还有更多） | — |
+| triton-lang/triton | 25 / 925（还有更多） | 0 / 0 | 10 / 17（还有更多） | 6 / 178（还有更多） | — |
+| kvcache-ai/Mooncake | 25 / 357（还有更多） | 2 / 2 | 1 / 1 | 6 / 7（还有更多） | — |
 | NVIDIA/TensorRT-LLM | 25 / 678（还有更多） | 0 / 0 | 0 / 0 | 6 / 180（还有更多） | — |
 | NVIDIA/cutlass | 25 / 460（还有更多） | 2 / 2 | 4 / 4 | 6 / 296（还有更多） | — |
-| pytorch/pytorch | 25 / 14127（还有更多） | 10 / 41（还有更多） | 0 / 0 | 0 / 0 | — |
+| pytorch/pytorch | 25 / 14135（还有更多） | 10 / 41（还有更多） | 0 / 0 | 0 / 0 | — |
 | ray-project/ray | 25 / 2827（还有更多） | 0 / 0 | 0 / 0 | 0 / 0 | — |
-| vllm-project/aibrix | 25 / 324（还有更多） | 5 / 5 | 10 / 12（还有更多） | 0 / 0 | — |
+| vllm-project/aibrix | 25 / 322（还有更多） | 5 / 5 | 10 / 12（还有更多） | 0 / 0 | — |
 
 分母是 API 该窗口的可用条目数；不同窗口可能重叠。固定条目另行刷新，Discussion 关闭或已回答的条目保留数据但不列为新机会。
 
 ## 本轮变化
 
-OPEN → CLOSED 1、上游更新 56、首次采集 165
+上游更新 55、首次采集 152
 
 条目离开抽样窗口不能推导已关闭；固定条目与上一轮机会清单会继续核对状态。
